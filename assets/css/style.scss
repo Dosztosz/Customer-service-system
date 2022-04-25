@@ -1,0 +1,206 @@
+        $border-radius: 15px;
+        body {
+            background-color: #edf2f6;
+            overflow-x: hidden;
+        }
+        
+        $kolor_przycisk: #384c71;
+        button {
+            outline: none;
+            height: 40px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            font-size: 1em;
+            box-sizing: border-box;
+            border: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            background-color: $kolor_przycisk;
+            color: white;
+            border: 1px solid black;
+            border-radius: 10px;
+            &:focus,
+            &:hover {
+                background-size: 150% 150%;
+                background-color: #87ceeb;
+                border: 1px solid #45b3e0;
+                color: #000000;
+            }
+        }
+        
+        button:active {
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4), inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+        }
+        
+        form {
+            border-radius: $border-radius;
+        }
+        
+        .srodek {
+            text-align: center;
+        }
+        
+        textarea {
+            border-radius: $border-radius;
+        }
+        
+        img {
+            margin-right: 5px;
+            border: 1px solid black;
+            width: 20px;
+            height: 15px;
+        }
+        
+        .col h2 {
+            margin-top: 40px;
+        }
+        
+        .odstep {
+            margin-top: 60px;
+            margin-left: 3%;
+            margin-right: 3%;
+            padding-bottom: 200px;
+        }
+        
+        .niebieski {
+            background-color: $kolor_przycisk;
+        }
+        
+        .col-1 {
+            padding-right: 0;
+            padding-top: 20px;
+            .blok {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                margin: 0;
+                display: block;
+                text-align: center;
+                height: 50px;
+                width: 100%;
+                list-style: none;
+                transition: 0.3s;
+                color: white;
+                &:hover {
+                    background-color: #2b4461;
+                }
+            }
+            .active {
+                background-color: #172433;
+            }
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .najechanie {
+            margin-left: 30px;
+            &:hover {
+                background-color: #87ceeb;
+            }
+        }
+        
+        .tlo {
+            background-color: white;
+            box-shadow: 4px 4px 4px 4px rgb(136, 136, 136);
+        }
+        
+        .bialy {
+            background-color: white;
+            border-radius: 15px;
+            margin-right: 15px;
+        }
+        
+        .aktywny {
+            background-color: #172433;
+        }
+        
+        .cien {
+            box-shadow: 10px 10px 10px 10px rgb(136, 136, 136);
+        }
+        
+        .duze {
+            width: 60%;
+        }
+        
+        .reszta {
+            width: 4%;
+        }
+        
+        .tabela table, tr {
+            align-content: center;
+            border-radius: 12px;
+            border: solid 1px rgb(173, 173, 173);
+        }
+        
+        tr:nth-child(even) {
+            background-color: #ecfaff;
+        }
+        
+        .kurierzy td {
+            padding-right: 30px;
+        }
+        
+        .czerwony {
+            background-color: red;
+        }
+        
+        .zolty {
+            background-color: yellow;
+        }
+        /* The animation code */
+        /* Style the buttons that are used to open and close the accordion panel */
+        
+        .accordion {
+            background-color: $kolor_przycisk;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.6s;
+        }
+
+        .active, .accordion:hover {
+            background-color: #87ceeb;
+            color: black;
+        }
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+        
+        .sortowanie {
+            background-color: $kolor_przycisk;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+        
+        .sortowanie_out {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+        
+        .input {
+            border-radius: 10px;
+            border: solid 1px $kolor_przycisk;
+        }
+        
+        .zielony {
+            background-color: greenyellow;
+        }

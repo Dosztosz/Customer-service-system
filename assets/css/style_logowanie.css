@@ -1,0 +1,24 @@
+body {
+  background-image: url("https://upload.cdn.baselinker.com/products/7512/74287562_15.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.blok {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: block;
+  background-color: #ffffff83;
+  width: 30vw;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 4px 4px #434234;
+          box-shadow: 4px 4px 4px 4px #434234;
+}
+/*# sourceMappingURL=style_logowanie.css.map */
