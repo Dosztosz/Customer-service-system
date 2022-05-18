@@ -1,5 +1,3 @@
-<nav class="navbar navbar-expand-lg navbar-light tlo">
-        <div class="container-fluid">
-            <h2>Szablony odpowiedzi</h2>
-        </div>
-    </nav>
+<div class="top">
+    <h2>Panel zarządzania</h2>
+</div>

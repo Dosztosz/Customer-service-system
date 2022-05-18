@@ -1,12 +1,19 @@
         $border-radius: 15px;
+        $kolor_przycisk: #202b3f;
         body {
             background-color: #edf2f6;
             overflow-x: hidden;
         }
+        .top {
+            background-color: #3475ad;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            color: white;
+        }
         .caly {
             min-height: 1000px;
         }
-        $kolor_przycisk: #384c71;
         button {
             outline: none;
             height: 40px;
@@ -101,11 +108,6 @@
             &:hover {
                 background-color: #87ceeb;
             }
-        }
-        
-        .tlo {
-            background-color: white;
-            box-shadow: 4px 4px 4px 8px rgba(136, 136, 136, 0.26);
         }
         
         .bialy {
