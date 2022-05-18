@@ -52,3 +52,10 @@ function stoopki_cm() {
     var wynik_stoopki_cm = (przelicz_stoopki_cm);
     document.getElementById("wynik_stoopki_cm").innerHTML = wynik_stoopki_cm;
 }
+function navopen(tab, data) {
+    document.getElementById(tab).style.display="none";
+}
+
+
+
+alert("You just copied this: (" + copyText + ").");

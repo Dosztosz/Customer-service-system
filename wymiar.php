@@ -33,6 +33,35 @@
         <h1 class="srodek">Wymiary paczek do wysyłki</h1>
             <div class="col-12">
             <h1 class="srodek">Wymiary EU</h1>
+            <button class="accordion_new">Dodaj Wymiar Paczki</button>
+            <div class="panel">
+                <form method="POST">
+                    <div class="field" tabindex="2">
+                        <input name="nazwa_up" type="text" placeholder="Nazwa Klienta" required><br>
+                        <input name="nr_zamowien_up" type="text" placeholder="Numer Zamówienia" required><br>
+                        <input name="nr_sledzenia_up" type="text" placeholder="Numer Śledzenia" required><br>
+                        <input name="data_zwrot_up" type="text" placeholder="Data Zwrotu Produktu" required><br>
+                        <input name="notatka_up" type="text" placeholder="Notatka" required>
+                        <input type="submit" value="Dodaj">
+		            </div>
+                </form>
+            </div>
+            <script>
+var acc = document.getElementsByClassName("accordion_new");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
             <table class="tabela">
                 <tr>
                     <td style="width: 12%; margin-right: 5px;">Nazwa</td>
@@ -62,7 +91,7 @@
                     <td>'.$nazwa.'</td>
                     <td>'.$wymiar_cale.' cali</td>
                     <td>'.$wagafunt.' funt</td>
-                    <td><a href="edytuj_paczka.php?id='.$id.'&naz='.$nazwa.'&wym='.$wymiar_cm.'&wagkg='.$waga_kg.'&wymcal='.$wymiar_cale.'&wagfunt='.$wagafunt.'&kategoria='.$kategoria.'">edytuj</a></td>
+                    <td><a href="commands/edytuj_paczka.php?id='.$id.'&naz='.$nazwa.'&wym='.$wymiar_cm.'&wagkg='.$waga_kg.'&wymcal='.$wymiar_cale.'&wagfunt='.$wagafunt.'&kategoria='.$kategoria.'">edytuj</a></td>
                     </tr>';
                 }
 

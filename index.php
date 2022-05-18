@@ -79,11 +79,11 @@
             <input class="contactform-input input" type="text" id="contactform-kilogram" placeholder="kilogram" name="kilogram" value="" onkeyup="kilogram()" />
             <span id="wynik_kilogram"></span> Kg
             <br>
-            <label class="contactform-label" for="contactform-kilogram">Przelicznik na Stopy:</label>
+            <label class="contactform-label" for="contactform-kilogram">Przelicznik na Stoopki:</label>
             <input class="contactform-input input" type="text" id="contactform-stoopki" placeholder="stoopki" name="kilogram" value="" onkeyup="stoopki()" />
             <span id="wynik_stoopki"></span> Ft
             <br>
-            <label class="contactform-label" for="contactform-kilogram">Przelicznik na centymetry (ze stóp):</label>
+            <label class="contactform-label" for="contactform-kilogram">Przelicznik na centymetry (ze stoopek):</label>
             <input class="contactform-input input" type="text" id="contactform-stoopkicm" placeholder="stoopki_cm" name="kilogram" value="" onkeyup="stoopki_cm()" />
             <span id="wynik_stoopki_cm"></span> cm
                 <!--pole tekstowe-->

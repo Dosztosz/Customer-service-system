@@ -74,11 +74,8 @@ require "addons/head.php";
                 <td>Ilość</td>
                 <td>Czas wysyłki</td>
                 <td>Amazon</td>
-                <td>Ebay</td>
                 <td>Shop</td>
                 <td>Kauf</td>
-                <td>Cdi</td>
-                <td>Etsy</td>
                 <td>All</td>
 
               </tr>
@@ -161,11 +158,8 @@ require "addons/head.php";
                         echo '<td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'>'.$ilosc.' szt</a></td>';
                         echo '<td class="reszta '.$kolor.'">'.$czas_powinien.' dni</td>';
                         echo '<td class="reszta '.$kolor_klasa.'">'.$czas_jest.' dni</td>';
-                        echo '<td class="reszta '.$kolor_klasa1.'">'.$ebay.' dni</td>';
                         echo '<td class="reszta '.$kolor_klasa2.'">'.$shopper.' dni</td>';
                         echo '<td class="reszta '.$kolor_klasa3.'">'.$kaufland.' dni</td>';
-                        echo '<td class="reszta '.$kolor_klasa4.'">'.$cdiscount.' dni</td>';
-                        echo '<td class="reszta '.$kolor_klasa5.'">'.$etsy.' dni</td>';
                         echo '<td class="reszta '.$kolor_klasa6.'">'.$allegro.' dni</td>';
                         echo '<td class="reszta"><a href = update_marketplace.php?id='.$id.'&il='.$czas_jest.'&eb='.$ebay.'&sh='.$shopper.'&kauf='.$kaufland.'&cdi='.$cdiscount.'&etsy='.$etsy.'&all='.$allegro.'>Update</a></td>';
 
