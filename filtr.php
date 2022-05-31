@@ -157,13 +157,16 @@ require "addons/head.php";
                         {
                           $kolor_klasa = $kolor;
                         }
-                        echo "<tr>";
+                        if ($czas == $czas_powinien){}
+                        else {
+                          echo "<tr>";
                         echo '<td class="duze">'.$nazwa.' | '.$profil.' | '.$rozmiar.' | '.$kolory.'</td>';
                         echo '<td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'>'.$ilosc.' szt</a></td>';
                         echo '<td class="reszta '.$kolor.'">'.$czas_powinien.' dni</td>';
                         echo '<td class="reszta '.$kolor_klasa.'">'.$czas.' dni</td>';
                         echo '<td class="reszta"><a href = commands/update_pojedynczy.php?id='.$id.'&il='.$czas.'&kol='.$kolumna.'>Update</a></td>';
                         echo "</tr>";
+                        }
                     }
                     
                         ?>
