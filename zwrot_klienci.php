@@ -27,7 +27,7 @@
     ?>
     <div class="col-11">
 
-        <div class="row odstep bialy">
+        <div class="row odstep bialy cien">
             <div>
             <h1 class="srodek">Zwroty W trakcie</h1>
             <button class="accordion">Dodaj Zwrot</button>

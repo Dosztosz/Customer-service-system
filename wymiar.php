@@ -29,7 +29,7 @@
     ?>
     <div class="col-11">
 
-        <div class="row odstep bialy">
+        <div class="row odstep bialy cien">
         <h1 class="srodek">Wymiary paczek do wysyłki</h1>
             <div class="col-12">
             <h1 class="srodek">Wymiary EU</h1>

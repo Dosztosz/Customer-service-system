@@ -28,7 +28,7 @@
     ?>
     <div class="col-11">
 
-        <div class="row odstep bialy">
+        <div class="row odstep bialy cien">
             <div>
             <h1 class="srodek">Archiwum Zwrotów</h1>
             <table class="tabela">

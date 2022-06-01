@@ -20,8 +20,7 @@ require "addons/head.php";
 ?>
 </head>
 
-<body
-    <!--navbar-->
+<body>
     <?php
     require 'addons/title.php'
 ?>
@@ -38,15 +37,13 @@ require "addons/head.php";
             <h1 class="srodek">Magazyn na Karosku</h1>
             <hr>
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Wyszukaj...">
-            <a href="nowy_produkt.php"><button>Dodaj produkt (nie działa)</button></a>
+            <a href="nowy_produkt.php"><button>Dodaj produkt</button></a>
             <table id="myTable">
-              <tr>
-                <td>Nazwa</td>
-                <td>Ilość</td>
-                <td>Czas wysyłki</td>
-
-              </tr>
-
+              <thead>
+                <th>Nazwa</th>
+                <th>Ilość</th>
+                <th>Czas wysyłki</th>
+              </thead>
         <?php
                     while($row = $result->fetch_assoc()) {
                         $id = $row['ID'];
