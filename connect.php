@@ -1,6 +1,6 @@
 <?php
-	$host = "mariadb106.server723887.nazwa.pl";
-	$db_user = "server723887_magneticmagazyn";
-	$db_password ="Magnetic1986";
-	$db_name = "server723887_magneticmagazyn";
+	$host = "127.0.0.1";
+	$db_user = "root";
+	$db_password ="";
+	$db_name = "customer_service";
 ?>
