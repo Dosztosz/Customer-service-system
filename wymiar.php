@@ -36,7 +36,7 @@
             <button class="accordion_new">Dodaj Wymiar Paczki</button>
             <div class="panel">
                 <form method="POST">
-                    <div class="field" tabindex="2">
+                    <div class="field" tabindex="2" action="functions/add_size.php">
                         <input name="nazwa_up" type="text" placeholder="Nazwa Klienta" required><br>
                         <input name="nr_zamowien_up" type="text" placeholder="Numer Zamówienia" required><br>
                         <input name="nr_sledzenia_up" type="text" placeholder="Numer Śledzenia" required><br>
