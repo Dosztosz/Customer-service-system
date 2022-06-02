@@ -12,8 +12,6 @@
 
   The warehouse has the ability to select products that have bad prep time on marketplaces and list them so they can be adjusted
 
-  Translated with www.DeepL.com/Translator (free version)
-
 <h3>Installation Process</h3>
   
   <ol>
