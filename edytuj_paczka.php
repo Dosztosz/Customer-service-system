@@ -6,7 +6,6 @@ $wymiar_cm = $_GET['wym'];
 $waga_kg = $_GET['wagkg'];
 $wymiar_cale = $_GET['wymcal'];
 $wagafunt = $_GET['wagfunt'];
-$kategoria = $_GET['kategoria'];
 $site = "wymiar";
 
 
@@ -20,7 +19,7 @@ if (isset($_POST['nazwa']))
     $wymiar_cale_n = $_POST['wymiarcal'];
     $waga_funt_n = $_POST['wagafunt'];
     $kategoria_n = $_POST['kategoria'];
-    require_once "../connect.php";
+    require_once "connect.php";
 	mysqli_report(MYSQLI_REPORT_STRICT);
     $conn = new mysqli($host, $db_user, $db_password, $db_name);
     $conn->set_charset("utf8");
@@ -29,9 +28,9 @@ if (isset($_POST['nazwa']))
 				echo "bład";
 			}
             else {
-                if($conn->query("UPDATE `wymiary` SET `nazwa` = '$nazwa_n', `wymiarcm` = '$wymiar_cm_n', `wagakg` = '$waga_kg_n', `wymiarcale` = '$wymiar_cale_n', `wagafunt` = '$waga_funt_n', `kategoria` = '$kategoria_n'  WHERE `Id` = $id;"))
+                if($conn->query("UPDATE `wymiary` SET `nazwa` = '$nazwa_n', `wymiarcm` = '$wymiar_cm_n', `wagakg` = '$waga_kg_n', `wymiarcale` = '$wymiar_cale_n', `wagafunt` = '$waga_funt_n'  WHERE `Id` = $id;"))
                 {
-                    header('Location: ../wymiar.php');
+                    header('Location: wymiar.php');
                 }
                 else
                 {
@@ -47,18 +46,18 @@ if (isset($_POST['nazwa']))
 <head>
     <title>Odpowiedzi</title>
     <?php
-    require "../addons/head.php";
+    require "addons/head.php";
 ?>
 </head>
 
 <body>
     <!--navbar-->
     <?php
-    require '../addons/title.php'
+    require 'addons/title.php'
 ?>
 <div class="row">
     <?php 
-    require '../addons/navbar.php';
+    require 'addons/navbar.php';
     ?>
     <div class="col-11">
     <div class="row odstep bialy cien">
@@ -88,10 +87,6 @@ if (isset($_POST['nazwa']))
     <tr>
         <td>Waga w Funtach </td>
         <td><input type="text" value="<?php echo "$wagafunt"?>" name="wagafunt" required></td>
-    </tr>
-    <tr>
-        <td>Kategoria </td>
-        <td><input type="text" value="<?php echo "$kategoria"?>" name="kategoria" required></td>
     </tr>
 </table>
 <input type="submit" value="akceptuj">

@@ -166,15 +166,15 @@ CREATE TABLE `wymiary` (
 -- Zrzut danych tabeli `wymiary`
 --
 
-INSERT INTO `wymiary` (`Id`, `nazwa`, `wymiarcm`, `wagakg`, `wymiarcale`, `wagafunt`, `kategoria`) VALUES
-(1, 'Nogi Gięte', '44x12x64', '6', '4,5', '5', 'inne'),
-(2, 'Dostawka', '31x12x80', '5', '0', '0', 'inne'),
-(3, 'Dostawka', '28x10x80', '5', '0', '0', 'inne'),
-(4, 'Ramy 40x42', '46x20x49', '12', '0', '0', '0'),
-(5, 'Ramy 60x40', '46x20x67', '12', '0', '0', '0'),
-(6, 'Ramy 60x72', '67x20x80', '15', '0', '0', '0'),
-(7, 'Ramy 70x72', '75x20x80', '15', '0', '0', '0'),
-(8, 'Ramy 80x72', '77x20x97', '16', '0', '0', '0');
+INSERT INTO `wymiary` (`Id`, `nazwa`, `wymiarcm`, `wagakg`, `wymiarcale`, `wagafunt`) VALUES
+(1, 'Nogi Gięte', '44x12x64', '6', '4,5', '5'),
+(2, 'Dostawka', '31x12x80', '5', '0', '0'),
+(3, 'Dostawka', '28x10x80', '5', '0', '0'),
+(4, 'Ramy 40x42', '46x20x49', '12', '0', '0'),
+(5, 'Ramy 60x40', '46x20x67', '12', '0', '0'),
+(6, 'Ramy 60x72', '67x20x80', '15', '0', '0'),
+(7, 'Ramy 70x72', '75x20x80', '15', '0', '0'),
+(8, 'Ramy 80x72', '77x20x97', '16', '0', '0');
 
 -- --------------------------------------------------------
 

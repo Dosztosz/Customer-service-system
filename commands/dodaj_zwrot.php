@@ -26,7 +26,7 @@ if (isset($_POST['nazwa_up']))
         {
             if($connect->query("INSERT INTO `zwroty` (`ID`, `klient`, `nr_zamowienia`, `nr_sledzenia`, `data_zwrotu`, `notatka`, `kategoria`) VALUES (NULL, '$nazwa_up', '$nr_zamowien_up', '$nr_sledzenia_up', '$data_zwrot_up', '$notatka_up', 'a');"))
             {
-                header('Location: ../zwrot_klienci.php');
+                header('Location: ../zwroty.php');
             }
             else{
                 echo"nie dziala wsadzanie";

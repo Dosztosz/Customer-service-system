@@ -1,11 +1,11 @@
 <?php
 header("Content-Type: text/html;charset=UTF-8");
 $id = $_GET['id'];
-$op = $_GET['op'];
+$tab = $_GET['tab'];
 
 if (isset($id))
 {
-    require_once "../connect.php";
+    require_once "connect.php";
 	mysqli_report(MYSQLI_REPORT_STRICT);
     $conn = new mysqli($host, $db_user, $db_password, $db_name);
     $conn->set_charset("utf8");
@@ -14,9 +14,14 @@ if (isset($id))
 				echo "nie dziala";
 			}
             else {
-                if($conn->query("UPDATE `zwroty` SET `kategoria` = '$op' WHERE `zwroty`.`ID` = $id;"))
+                if($conn->query("DELETE FROM `$tab` WHERE `ID` = $id;"))
                 {
-                                        header('Location: ../zwrot_klienci.php');
+                    if($tab == 'skroty'){
+                        header('Location: index.php');
+                    }
+                    else {
+                        header('Location: '.$tab.'.php');
+                    }
                 }
             }
 }

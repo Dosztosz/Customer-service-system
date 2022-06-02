@@ -5,7 +5,7 @@
     $conn->set_charset("utf8");
     $sql = "SELECT * FROM skroty;";
 	$result = $conn->query($sql);
-    $site = "odpowiedzi";
+    $site = "skroty";
     ?>
 
 
@@ -44,6 +44,7 @@
                     
 
                     while($row = $result->fetch_assoc()) {
+                        $id = $row['id'];
                         $nazwa = $row['Nazwa'];
                         $niemiecki = $row['niemiecki'];
                         $francuski = $row['francuski'];
@@ -56,7 +57,7 @@
                         echo '<button onClick="SelfCopy(this.id)" id="'.$wloski.'"><img src="img/it.svg">po wlosku</button>';
                         echo '<button onClick="SelfCopy(this.id)" id="'.$polski.'"><img src="img/pl.svg">po polsku</button>';
                         echo '<button onClick="SelfCopy(this.id)" id="'.$angielski.'"><img src="img/us.svg">po angielsku</button>';
-                        echo '<a href="commands/delete_answer.php?id='.$row['id'].'" style="red">usuń</a>';
+                        echo '<a href="delete.php?id='.$id.'&tab='.$site.'" style="red">usuń</a>';
                     }
                         ?>
             </div>
@@ -80,13 +81,13 @@
                 <input class="contactform-input input" type="text" id="contactform-kilogram" placeholder="kilogram" name="kilogram" value="" onkeyup="kilogram()" />
                 <span id="wynik_kilogram"></span> Kg
                 <br>
-                <label class="contactform-label" for="contactform-kilogram">Przelicznik na Stoopki:</label>
+                <label class="contactform-label" for="contactform-kilogram">Przelicznik na centymetry (stopy):</label>
                 <input class="contactform-input input" type="text" id="contactform-stoopki" placeholder="stoopki" name="kilogram" value="" onkeyup="stoopki()" />
-                <span id="wynik_stoopki"></span> Ft
+                <span id="wynik_stoopki"></span> cm
                 <br>
-                <label class="contactform-label" for="contactform-kilogram">Przelicznik na centymetry (ze stoopek):</label>
+                <label class="contactform-label" for="contactform-kilogram">Przelicznik na stopy:</label>
                 <input class="contactform-input input" type="text" id="contactform-stoopkicm" placeholder="stoopki_cm" name="kilogram" value="" onkeyup="stoopki_cm()" />
-                <span id="wynik_stoopki_cm"></span> cm
+                <span id="wynik_stoopki_cm"></span> ft
                     <!--pole tekstowe-->
                 <h3>pole tekstowe</h3>
                 <textarea rows="25" cols="80"></textarea>

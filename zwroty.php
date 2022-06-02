@@ -5,7 +5,7 @@
     $conn->set_charset("utf8");
     $sql = "SELECT * FROM zwroty ORDER BY kategoria ASC;";
 	$result = $conn->query($sql);
-    $site = "zwrot_klient";
+    $site = "zwroty";
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,7 +86,7 @@ for (i = 0; i < acc.length; i++) {
                     <td>'.$nr_sledzenia.'</td>
                     <td>'.$data_zwrotu.'</td>
                     <td>'.$notatka.'</td>
-                    <td class="reszta"><a href = commands/delete.php?id='.$id.'&op=b>Zakończ</a></td>
+                    <td class="reszta"><a href=commands/archive.php?id='.$id.'&op=b>Zakończ</a></td>
                     </tr>';
                     }
                 }

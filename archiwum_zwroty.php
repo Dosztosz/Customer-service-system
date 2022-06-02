@@ -5,7 +5,7 @@
     $conn->set_charset("utf8");
     $sql = "SELECT * FROM zwroty ORDER BY kategoria ASC;";
 	$result = $conn->query($sql);
-    $site = "zwrot_klient";
+    $site = "zwroty";
 
     ?>
 <!DOCTYPE html>
@@ -58,11 +58,10 @@
                     <td>'.$nr_sledzenia.'</td>
                     <td>'.$data_zwrotu.'</td>
                     <td>'.$notatka.'</td>
-                    <td class="reszta"><a href = commands/skasuj.php?id='.$id.'>Skasuj</a>/<a href = commands/delete.php?id='.$id.'&op=a>Przywróć</a></td>
+                    <td class="reszta"><a href = delete.php?id='.$id.'&tab='.$site.'>Skasuj</a>/<a href = commands/delete.php?id='.$id.'&op=a>Przywróć</a></td>
                     </tr>';
                     }
                 }
-
                 echo "</table>";
             ?>
             </div>

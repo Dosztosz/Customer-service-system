@@ -1,6 +1,7 @@
 <?php
 header("Content-Type: text/html;charset=UTF-8");
 $id = $_GET['id'];
+$op = $_GET['op'];
 
 if (isset($id))
 {
@@ -13,9 +14,9 @@ if (isset($id))
 				echo "nie dziala";
 			}
             else {
-                if($conn->query("DELETE FROM `skroty` WHERE `skroty`.`id` = '$id'"))
+                if($conn->query("UPDATE `zwroty` SET `kategoria` = '$op' WHERE `zwroty`.`ID` = $id;"))
                 {
-                                        header('Location: ../index.php');
+                                        header('Location: ../zwroty.php');
                 }
             }
 }
