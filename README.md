@@ -20,8 +20,10 @@
     <li>Change the connect.php informations according to your database</li>
     <li>Done!</li>
   </ol>
-  
+  **Sample Images**
   <img src="https://github.com/Dosztosz/Customer-service-system/blob/main/screenshot/main.png?raw=true">
+  <img src="https://github.com/Dosztosz/Customer-service-system/blob/main/screenshot/faq.png?raw=true">
+  <img src="https://github.com/Dosztosz/Customer-service-system/blob/main/screenshot/return.png?raw=true">
   
   <h2>PL</h2>
   
