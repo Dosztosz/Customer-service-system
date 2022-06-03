@@ -12,7 +12,7 @@
 
   The warehouse has the ability to select products that have bad prep time on marketplaces and list them so they can be adjusted
 
-<h3>Installation Process</h3>
+**Installation Process**
   
   <ol>
     <li>Download the Repository</li>
@@ -21,6 +21,7 @@
     <li>Done!</li>
   </ol>
   
+  <img src="https://github.com/Dosztosz/Customer-service-system/tree/main/screenshot/main.png">
   
   <h2>PL</h2>
   
@@ -33,7 +34,7 @@
 
   Magazyn ma możliwość selekcji produktów, które mają zły czas przygotowania na marketplace'ach i wypisanie ich w liście aby można było je dostosować
   
-  <h3>Proces instalacji</h3>
+  **Proces instalacji**
   
   <ol>
     <li>Pobierz repozytorium</li>
