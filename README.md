@@ -21,7 +21,7 @@
     <li>Done!</li>
   </ol>
   
-  <img src="https://github.com/Dosztosz/Customer-service-system/tree/main/screenshot/main.png">
+  <img src="https://github.com/Dosztosz/Customer-service-system/blob/main/screenshot/main.png?raw=true">
   
   <h2>PL</h2>
   
