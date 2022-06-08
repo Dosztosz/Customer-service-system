@@ -33,13 +33,11 @@
     <div class="col-11">
 
         <div class="row odstep bialy cien">
-            <div class="col-6">
+            <div class="col-6 odpowiedzi">
                 <!--wypis odpowiedzi-->
             <h1 class="srodek">Odpowiedzi</h1>
             <hr>
-            <center>
-                <a href="dodanie.php"><button>Stwórz odpowiedź</button></a>
-            </center>
+            <a href="dodanie.php"><button>Stwórz odpowiedź</button></a>
         <?php
                     
 

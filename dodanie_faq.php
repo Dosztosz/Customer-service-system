@@ -50,15 +50,18 @@
                 <!--wypis odpowiedzi-->
             <h1 class="srodek">Dodaj Odpowiedź</h1>
 
-<form method="post">
-			Nazwa: <br> <textarea class="pisanie" rows="1" cols="50" id="wklej" name="nazwa"></textarea> <br>
-			Tresc (w html): <br> <textarea class="pisanie" rows="20" cols="100" id="wklej" name="tresc"></textarea> <br>	
+            <form method="post">
+                        Nazwa: <br> <textarea class="pisanie" rows="1" cols="50" id="wklej" name="nazwa"></textarea> <br>
+                        Tresc (w html): <br> <textarea class="pisanie" rows="20" cols="100" id="wklej" name="tresc"></textarea> <br>	
 
-	<input type="submit" value="Dodaj Odpowiedź">
-		
-</form>
-            </div>
+                <input type="submit" value="Dodaj Odpowiedź"> 
+            </form>
+            <h2>Poradnik</h2>
+            <ol>
+                <li>Aby dać większy tekst użyj zakładki < h1-h5 > pamiętaj o zamknięciu przy pomocy < /h1-h5></li>
+            </ol>
         </div>
+    </div>
     
 </body>
 </html>

@@ -58,7 +58,7 @@ textarea {
   border-radius: 15px;
 }
 
-img {
+.odpowiedzi img {
   margin-right: 5px;
   border: 1px solid black;
   width: 20px;
@@ -231,5 +231,9 @@ tr:nth-child(even) {
 
 .zielony {
   background-color: greenyellow;
+}
+
+.faq_image img {
+  width: 60vw;
 }
 /*# sourceMappingURL=style.css.map */

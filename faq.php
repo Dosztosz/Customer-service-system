@@ -44,7 +44,7 @@ header("Content-Type: text/html;charset=UTF-8");
                 $nazwa = $row['Nazwa'];
                 $tresc = $row['Tresc'];
             echo '<button class="accordion">'.$nazwa.'</button>';
-            echo '<div class="panel"><p>'.$tresc.'</p><a style="font: size 5px; color: red;" href=delete.php?id='.$id.'&tab='.$site.'>skasuj</a></div>';
+            echo '<div class="panel faq_image"><p>'.$tresc.'</p><a style="font: size 5px; color: red;" href=delete.php?id='.$id.'&tab='.$site.'>skasuj</a></div>';
             }
             ?>
         <script>
