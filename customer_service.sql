@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: mariadb106.server723887.nazwa.pl:3306
--- Czas generowania: 01 Cze 2022, 11:41
--- Wersja serwera: 10.6.7-MariaDB-log
--- Wersja PHP: 7.2.24-0ubuntu0.18.04.7
+-- Host: 127.0.0.1
+-- Czas generowania: 13 Cze 2022, 13:59
+-- Wersja serwera: 10.4.24-MariaDB
+-- Wersja PHP: 8.1.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `server723887_magneticmagazyn`
+-- Baza danych: `customer_service`
 --
 
 -- --------------------------------------------------------
@@ -44,7 +44,7 @@ INSERT INTO `faq` (`ID`, `Nazwa`, `Tresc`) VALUES
 (5, 'Zwrot Ebay', '<ol>\r\n<li>zgłoszony zwrot</li>\r\n<li>pytamy o zdjęcie</li>\r\n<li>oferujemy zniżkę żeby klient nie odsyłał</li>\r\n</ol>'),
 (6, 'Zwrot Kaufland', '<ol>\r\n<li>zgłoszony zwrot</li>\r\n<li>pytamy o zdjęcie</li>\r\n<li>oferujemy zniżkę żeby klient nie odsyłał, musimy dać etykiete GLS DE (zawsze)</li>\r\n</ol>'),
 (7, 'Zwrot Cdiscount', '<ol>\r\n<li>zgłoszony zwrot</li>\r\n<li>pytamy o zdjęcie</li>\r\n<li>oferujemy zniżkę żeby klient nie odsyłał, Jeżeli klient chce zwr&oacute;cic szukam czy inny klient nie zam&oacute;wił tego samego produktu - <strong>zawsze musimy dawac etykiete bo jestesmy poza francja</strong></li>\r\n</ol>'),
-(8, 'Jak stworzyć etykietę GLS DE', '<p>Po włączeniu aukcji na Baselinker zjedź na zakładkę przesyłki oraz naciśnij przycisk GLS DE jak w obrazku poniżej.</p>\r\n<img src=\"http://dosztosz.com/skroty/img/instr/instr1.jpg\" height=\"400px\">\r\n<p>Następnie Podaj wagę paczki oraz nadaj przesyłkę. Aby otworzyć etykietę naciśnij przycisk etykieta w linijce numeru przesyłki</p>\r\n<img src=\"http://dosztosz.com/skroty/img/instr/instr2.jpg\" height=\"400px\">');
+(16, 'Nadanie zwrotu przez Baselinker na Niemcy', '<ol>\r\n\r\n<li>Wchodzimy w zamówienie</li>\r\n<li>Wybieramy GLS_DE <br><img src=\"img/faq/zwrot.png\"></li>\r\n<li>Wpisujemy Wagę oraz naciskamy nadaj przesyłkę <img src=\"img/faq/zwrot_2.png\"></li>\r\n<li>Po wygenerowaniu etykiety aby pobrać przesyłkę naciskamy etykieta<img src=\"img/faq/zwrot_3.png\"></li>\r\n\r\n</ol>');
 
 -- --------------------------------------------------------
 
@@ -54,10 +54,10 @@ INSERT INTO `faq` (`ID`, `Nazwa`, `Tresc`) VALUES
 
 CREATE TABLE `karosek` (
   `ID` int(11) NOT NULL,
-  `Nazwa` text CHARACTER SET utf8mb3 COLLATE utf8mb3_polish_ci NOT NULL,
+  `Nazwa` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
   `Profil` varchar(55) NOT NULL,
-  `Rozmiar` text CHARACTER SET utf8mb3 COLLATE utf8mb3_polish_ci NOT NULL,
-  `Kolor` text CHARACTER SET utf8mb3 COLLATE utf8mb3_polish_ci NOT NULL,
+  `Rozmiar` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
+  `Kolor` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
   `Ilosc` int(11) NOT NULL,
   `czas_jest` text NOT NULL,
   `ebay` varchar(10) NOT NULL,
@@ -83,7 +83,34 @@ INSERT INTO `karosek` (`ID`, `Nazwa`, `Profil`, `Rozmiar`, `Kolor`, `Ilosc`, `cz
 (8, 'Rama', '8x4', '60x40', 'Czarny', 0, '', '', '', '7', '', '', ''),
 (9, 'Rama', '8x4', '60x72', 'Czarny', 3, '', '', '', '7', '', '', ''),
 (10, 'Rama', '8x4', '70x72', 'Czarny', 5, '', '', '', '7', '', '', ''),
-(11, 'Rama', '8x4', '80x72', 'Czarny', 2, '', '', '', '7', '', '', '');
+(11, 'Rama', '8x4', '80x72', 'Czarny', 2, '', '', '', '7', '', '', ''),
+(6448108, 'Rama', '8x4', '90x72', 'Czarny', 0, '', '', '', '7', '', '', ''),
+(6448109, 'Rama', '8x4', '40x42', 'Biały', 4, '', '', '', '7', '', '', ''),
+(6448110, 'Rama', '8x4', '60x40', 'Biały', 1, '', '', '', '7', '', '', ''),
+(6448111, 'Rama', '8x4', '60x72', 'Biały', 3, '', '', '', '7', '', '', ''),
+(6448112, 'Rama', '8x4', '70x72', 'Biały', 6, '', '', '', '7', '', '', ''),
+(6448113, 'Rama', '8x4', '80x72', 'Biały', 0, '', '', '', '20', '', '', ''),
+(6448114, 'Rama', '8x4', '90x72', 'Biały', 3, '', '', '', '7', '', '', ''),
+(6448135, 'Rama', '10x4', '60x72', 'Stal', 1, '', '', '', '7', '', '', ''),
+(6448136, 'Rama', '10x4', '70x72', 'Stal', 0, '', '', '', '20', '', '', ''),
+(6448137, 'Rama', '10x4', '80x72', 'Stal', 0, '', '', '', '20', '', '', ''),
+(6448138, 'Rama', '10x4', '90x72', 'Stal', 0, '', '', '', '20', '', '', ''),
+(6448141, 'Rama', '10x4', '60x72', 'Czarny', 1, '', '', '', '7', '', '', ''),
+(6448142, 'Rama', '10x4', '70x72', 'Czarny', 1, '', '', '', '7', '', '', ''),
+(6448143, 'Rama', '10x4', '80x72', 'Czarny', 3, '', '', '', '20', '', '', ''),
+(6448144, 'Rama', '10x4', '90x72', 'Czarny', 2, '', '', '', '7', '', '', ''),
+(6448147, 'Rama', '10x4', '60x72', 'Biały', 0, '', '', '', '20', '', '', ''),
+(6448148, 'Rama', '10x4', '70x72', 'Biały', 1, '', '', '', '7', '', '', ''),
+(6448149, 'Rama', '10x4', '80x72', 'Biały', 2, '', '', '', '7', '', '', ''),
+(6448150, 'Rama', '10x4', '90x72', 'Biały', 1, '', '', '', '7', '', '', ''),
+(6448163, 'Trapez', '8x4', '', 'Stal', 0, '', '', '', '', '', '', ''),
+(6448164, 'Trapez', '8x4', '', 'Czarny', 2, '', '', '', '', '', '', ''),
+(6448165, 'Trapez', '8x4', '', 'Biały', 0, '', '', '', '', '', '', ''),
+(1100594218, 'Tomasz', 'sads', 'dasdsa', 'stal', 0, '0', '0', '0', '0', '0', '0', '0'),
+(1100594219, 'Tomasz', 'sads', 'dasdsa', 'czarny', 0, '0', '0', '0', '0', '0', '0', '0'),
+(1100594220, 'Tomasz', 'sads', 'dasdsa', 'biały', 0, '0', '0', '0', '0', '0', '0', '0'),
+(1100594221, 'Tomasz', 'sads', 'dasdsa', 'antracyt', 0, '0', '0', '0', '0', '0', '0', '0'),
+(1100594222, 'Tomasz', 'sads', 'dasdsa', 'złoty', 0, '0', '0', '0', '0', '0', '0', '0');
 
 -- --------------------------------------------------------
 
@@ -93,14 +120,14 @@ INSERT INTO `karosek` (`ID`, `Nazwa`, `Profil`, `Rozmiar`, `Kolor`, `Ilosc`, `cz
 
 CREATE TABLE `paczki` (
   `Id` int(11) NOT NULL,
-  `kraj` text CHARACTER SET utf8mb3 NOT NULL,
-  `2kg` text CHARACTER SET utf8mb3 NOT NULL,
-  `5kg` text CHARACTER SET utf8mb3 NOT NULL,
-  `10kg` text CHARACTER SET utf8mb3 NOT NULL,
-  `15kg` text CHARACTER SET utf8mb3 NOT NULL,
-  `25kg` text CHARACTER SET utf8mb3 NOT NULL,
-  `30kg` text CHARACTER SET utf8mb3 NOT NULL,
-  `40kg` text CHARACTER SET utf8mb3 NOT NULL
+  `kraj` text CHARACTER SET utf8 NOT NULL,
+  `2kg` text CHARACTER SET utf8 NOT NULL,
+  `5kg` text CHARACTER SET utf8 NOT NULL,
+  `10kg` text CHARACTER SET utf8 NOT NULL,
+  `15kg` text CHARACTER SET utf8 NOT NULL,
+  `25kg` text CHARACTER SET utf8 NOT NULL,
+  `30kg` text CHARACTER SET utf8 NOT NULL,
+  `40kg` text CHARACTER SET utf8 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -126,11 +153,11 @@ INSERT INTO `paczki` (`Id`, `kraj`, `2kg`, `5kg`, `10kg`, `15kg`, `25kg`, `30kg`
 CREATE TABLE `skroty` (
   `id` int(11) NOT NULL,
   `Nazwa` text NOT NULL,
-  `niemiecki` text CHARACTER SET utf8mb3 COLLATE utf8mb3_polish_ci NOT NULL,
-  `francuski` text CHARACTER SET utf8mb3 COLLATE utf8mb3_polish_ci NOT NULL,
-  `wloski` text CHARACTER SET utf8mb3 COLLATE utf8mb3_polish_ci NOT NULL,
-  `polski` text CHARACTER SET utf8mb3 COLLATE utf8mb3_polish_ci NOT NULL,
-  `angielski` text CHARACTER SET utf8mb3 COLLATE utf8mb3_polish_ci NOT NULL
+  `niemiecki` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
+  `francuski` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
+  `wloski` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
+  `polski` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
+  `angielski` text CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -158,8 +185,7 @@ CREATE TABLE `wymiary` (
   `wymiarcm` varchar(30) NOT NULL,
   `wagakg` varchar(30) NOT NULL,
   `wymiarcale` varchar(30) NOT NULL,
-  `wagafunt` varchar(30) NOT NULL,
-  `kategoria` varchar(30) NOT NULL
+  `wagafunt` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin2;
 
 --
@@ -167,14 +193,10 @@ CREATE TABLE `wymiary` (
 --
 
 INSERT INTO `wymiary` (`Id`, `nazwa`, `wymiarcm`, `wagakg`, `wymiarcale`, `wagafunt`) VALUES
-(1, 'Nogi Gięte', '44x12x64', '6', '4,5', '5'),
+(1, 'Nogi Gięte', '44x12x65', '6', '4,5', '5'),
 (2, 'Dostawka', '31x12x80', '5', '0', '0'),
 (3, 'Dostawka', '28x10x80', '5', '0', '0'),
-(4, 'Ramy 40x42', '46x20x49', '12', '0', '0'),
-(5, 'Ramy 60x40', '46x20x67', '12', '0', '0'),
-(6, 'Ramy 60x72', '67x20x80', '15', '0', '0'),
-(7, 'Ramy 70x72', '75x20x80', '15', '0', '0'),
-(8, 'Ramy 80x72', '77x20x97', '16', '0', '0');
+(4, 'Ramy 40x42', '46x20x49', '12', '3', '0');
 
 -- --------------------------------------------------------
 
@@ -197,8 +219,9 @@ CREATE TABLE `zwroty` (
 --
 
 INSERT INTO `zwroty` (`ID`, `klient`, `nr_zamowienia`, `nr_sledzenia`, `data_zwrotu`, `notatka`, `kategoria`) VALUES
-(28, 'Mohamed Elabd', '303-1656630-2670717', 'YYOGIJOV', '10.05.2022', 'j155', 'b'),
-(29, 'Peter Scheuenstuhl', '362-7323280-2581927 ', ' YYOGIJ5A ', '10.05.2022', 'p115', 'b');
+(54, 'sa', 'dasd', 'sad', 'sadasdsadsad', 'sadasdsa', 'b'),
+(55, 'sadsad', 'dsad', 'sads', 'adsad', 'asdasda', 'b'),
+(57, 'Tomasz', '543-234-123-534', 'y7d6asdsa9', '03.06.2022', 'not', 'a');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -248,13 +271,13 @@ ALTER TABLE `zwroty`
 -- AUTO_INCREMENT dla tabeli `faq`
 --
 ALTER TABLE `faq`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT dla tabeli `karosek`
 --
 ALTER TABLE `karosek`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1100594218;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1100594223;
 
 --
 -- AUTO_INCREMENT dla tabeli `paczki`
@@ -266,19 +289,19 @@ ALTER TABLE `paczki`
 -- AUTO_INCREMENT dla tabeli `skroty`
 --
 ALTER TABLE `skroty`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT dla tabeli `wymiary`
 --
 ALTER TABLE `wymiary`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT dla tabeli `zwroty`
 --
 ALTER TABLE `zwroty`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
