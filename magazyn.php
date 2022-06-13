@@ -42,7 +42,7 @@ require "addons/head.php";
               <thead>
                 <th>Nazwa</th>
                 <th>Ilość</th>
-                <th>Czas wysyłki</th>
+                <th>Edycja</th>
               </thead>
         <?php
                     while($row = $result->fetch_assoc()) {

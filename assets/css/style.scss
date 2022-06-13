@@ -129,6 +129,7 @@
         .duze {
             width: 60%;
             padding-left: 10px;
+            word-spacing: 100px;
         }
         
         .reszta {
@@ -138,8 +139,7 @@
         .tabela table,
         tr {
             align-content: center;
-            border-radius: 12px;
-            border: solid 1px rgb(173, 173, 173);
+            border: solid 1px rgb(226, 226, 226);
         }
         
         tr:nth-child(even) {

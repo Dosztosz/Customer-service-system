@@ -137,6 +137,7 @@ a {
 .duze {
   width: 60%;
   padding-left: 10px;
+  word-spacing: 100px;
 }
 
 .reszta {
@@ -147,8 +148,7 @@ a {
 tr {
   -ms-flex-line-pack: center;
       align-content: center;
-  border-radius: 12px;
-  border: solid 1px #adadad;
+  border: solid 1px #e2e2e2;
 }
 
 tr:nth-child(even) {
