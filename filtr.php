@@ -22,10 +22,10 @@ require "addons/head.php";
 ?>
 </head>
 
-<body
+<body>
     <!--navbar-->
     <?php
-    require 'addons/title.php'
+    require 'addons/title.php';
 ?>
 <div class="row">
     <!--menu pionowe-->

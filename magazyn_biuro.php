@@ -20,7 +20,7 @@ require "addons/head.php";
 ?>
 </head>
 
-<body
+<body>
     <!--navbar-->
     <?php
     require 'addons/title.php'
