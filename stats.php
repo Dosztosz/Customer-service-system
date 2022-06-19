@@ -5,7 +5,7 @@
     $conn->set_charset("utf8");
     $sql = "SELECT * FROM zwroty ORDER BY kategoria ASC;";
 	$result = $conn->query($sql);
-    $site = "zwroty";
+    $site = "staty";
     ?>
 <!DOCTYPE html>
 <html lang="en">
