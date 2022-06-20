@@ -163,8 +163,8 @@ require "addons/head.php";
                         echo '<td class="duze">'.$nazwa.' | '.$profil.' | '.$rozmiar.' | '.$kolory.'</td>';
                         echo '<td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'>'.$ilosc.' szt</a></td>';
                         echo '<td class="reszta '.$kolor.'">'.$czas_powinien.' dni</td>';
-                        echo '<td class="reszta '.$kolor_klasa.'">'.$czas.' dni</td>';
-                        echo '<td class="reszta"><a href = commands/update_pojedynczy.php?id='.$id.'&il='.$czas.'&kol='.$kolumna.'>Update</a></td>';
+                        echo '<td class="reszta '.$kolor_klasa.'"><a href = commands/update_pojedynczy.php?id='.$id.'&il='.$czas.'&kol='.$kolumna.'>'.$czas.' dni</a></td>';
+                        echo '<td class="reszta"><a href = commands/zatwierdz.php?id='.$id.'&il='.$czas.'&kol='.$kolumna.'&pow='.$czas_powinien.'>Zatwierdź</a></td>';
                         echo "</tr>";
                         }
                     }
