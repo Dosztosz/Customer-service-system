@@ -43,13 +43,13 @@ require "addons/head.php";
             <!--Harmonijka-->
             <button class="sortowanie">Wyświetl niezgodne</button>
             <div class="sortowanie_out">
-            <a href="filtr.php?kolumna='czas_jest'"><button>Amazon</button></a>
-            <a href="filtr.php?kolumna='ebay'"><button>Ebay</button></a>
-            <a href="filtr.php?kolumna='shopper'"><button>Shopper</button></a>
-            <a href="filtr.php?kolumna='kaufland'"><button>Kaufland</button></a>
-            <a href="filtr.php?kolumna='cdiscount'"><button>Cdiscount</button></a>
-            <a href="filtr.php?kolumna='etsy'"><button>Etsy</button></a>
-            <a href="filtr.php?kolumna='allegro'"><button>Allegro</button></a>
+            <a href="filtr.php?kolumna=czas_jest"><button>Amazon</button></a>
+            <a href="filtr.php?kolumna=ebay"><button>Ebay</button></a>
+            <a href="filtr.php?kolumna=shopper"><button>Shopper</button></a>
+            <a href="filtr.php?kolumna=kaufland"><button>Kaufland</button></a>
+            <a href="filtr.php?kolumna=cdiscount"><button>Cdiscount</button></a>
+            <a href="filtr.php?kolumna=etsy"><button>Etsy</button></a>
+            <a href="filtr.php?kolumna=allegro"><button>Allegro</button></a>
             </div>
             <script>
             var acc = document.getElementsByClassName("sortowanie");

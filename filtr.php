@@ -45,13 +45,13 @@ require "addons/head.php";
             <!--Harmonijka-->
             <button class="sortowanie">Wyświetl niezgodne</button>
             <div class="sortowanie_out">
-            <a href="filtr.php?kolumna='amazon'"><button>Amazon</button></a>
-            <a href="filtr.php?kolumna='ebay'"><button>Ebay</button></a>
-            <a href="filtr.php?kolumna='shopper'"><button>Shopper</button></a>
-            <a href="filtr.php?kolumna='kaufland'"><button>Kaufland</button></a>
-            <a href="filtr.php?kolumna='cdiscount'"><button>Cdiscount</button></a>
-            <a href="filtr.php?kolumna='etsy'"><button>Etsy</button></a>
-            <a href="filtr.php?kolumna='allegro'"><button>Allegro</button></a>
+            <a href="filtr.php?kolumna=amazon"><button>Amazon</button></a>
+            <a href="filtr.php?kolumna=ebay"><button>Ebay</button></a>
+            <a href="filtr.php?kolumna=shopper"><button>Shopper</button></a>
+            <a href="filtr.php?kolumna=kaufland"><button>Kaufland</button></a>
+            <a href="filtr.php?kolumna=cdiscount"><button>Cdiscount</button></a>
+            <a href="filtr.php?kolumna=etsy"><button>Etsy</button></a>
+            <a href="filtr.php?kolumna=allegro"><button>Allegro</button></a>
             </div>
             <script>
             var acc = document.getElementsByClassName("sortowanie");
@@ -102,31 +102,31 @@ require "addons/head.php";
                       $kolor_klasa4 = "none";
                       $kolor_klasa5 = "none";
                       $kolor_klasa6 = "none";
-                        if($kolumna == "'czas_jest'")
+                        if($kolumna == "czas_jest")
                         {
                           $czas = $row['czas_jest'];
                         }
-                        elseif ($kolumna =="'ebay'")
+                        elseif ($kolumna =="ebay")
                         {
                           $czas = $row['ebay'];
                         }
-                        elseif ($kolumna =="'shopper'")
+                        elseif ($kolumna =="shopper")
                         {
                           $czas = $row['shopper'];
                         }
-                        elseif ($kolumna =="'kaufland'")
+                        elseif ($kolumna =="kaufland")
                         {
                           $czas = $row['kaufland'];
                         }
-                        elseif ($kolumna =="'cdiscount'")
+                        elseif ($kolumna =="cdiscount")
                         {
                           $czas = $row['cdiscount'];
                         }
-                        elseif ($kolumna =="'etsy'")
+                        elseif ($kolumna =="etsy")
                         {
                           $czas = $row['etsy'];
                         }
-                        elseif ($kolumna =="'allegro'")
+                        elseif ($kolumna =="allegro")
                         {
                           $czas = $row['allegro'];
                         }
