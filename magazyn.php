@@ -4,7 +4,7 @@ header("Content-Type: text/html;charset=UTF-8");
     $conn = new mysqli($host, $db_user, $db_password, $db_name);
     $sql = "SELECT * FROM karosek;";
     $conn->set_charset("utf8");
-	$result = $conn->query($sql);
+	  $result = $conn->query($sql);
     $site = "magazyn";
     ?>
 
