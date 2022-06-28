@@ -153,17 +153,20 @@ require "addons/head.php";
                         {
                           $kolor_klasa6 = $kolor;
                         }
-                        echo "<tr>";
-                        echo '<td class="duze">'.$nazwa.' | '.$profil.' | '.$rozmiar.' | '.$kolory.'</td>';
-                        echo '<td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'>'.$ilosc.' szt</a></td>';
-                        echo '<td class="reszta '.$kolor.'">'.$czas_powinien.' dni</td>';
-                        echo '<td class="reszta '.$kolor_klasa.'">'.$czas_jest.' dni</td>';
-                        echo '<td class="reszta '.$kolor_klasa2.'">'.$shopper.' dni</td>';
-                        echo '<td class="reszta '.$kolor_klasa3.'">'.$kaufland.' dni</td>';
-                        echo '<td class="reszta '.$kolor_klasa6.'">'.$allegro.' dni</td>';
-                        echo '<td class="reszta"><a href = update_marketplace.php?id='.$id.'&il='.$czas_jest.'&eb='.$ebay.'&sh='.$shopper.'&kauf='.$kaufland.'&cdi='.$cdiscount.'&etsy='.$etsy.'&all='.$allegro.'>Update</a></td>';
-
-                        echo "</tr>";
+                        if($nazwa != "Siedzisko")
+                        {
+                          echo "<tr>";
+                          echo '<td class="duze">'.$nazwa.' | '.$profil.' | '.$rozmiar.' | '.$kolory.'</td>';
+                          echo '<td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'>'.$ilosc.' szt</a></td>';
+                          echo '<td class="reszta '.$kolor.'">'.$czas_powinien.' dni</td>';
+                          echo '<td class="reszta '.$kolor_klasa.'">'.$czas_jest.' dni</td>';
+                          echo '<td class="reszta '.$kolor_klasa2.'">'.$shopper.' dni</td>';
+                          echo '<td class="reszta '.$kolor_klasa3.'">'.$kaufland.' dni</td>';
+                          echo '<td class="reszta '.$kolor_klasa6.'">'.$allegro.' dni</td>';
+                          echo '<td class="reszta"><a href = update_marketplace.php?id='.$id.'&il='.$czas_jest.'&eb='.$ebay.'&sh='.$shopper.'&kauf='.$kaufland.'&cdi='.$cdiscount.'&etsy='.$etsy.'&all='.$allegro.'>Update</a></td>';
+  
+                          echo "</tr>";
+                        }
                     }
                     
                         ?>

@@ -37,6 +37,11 @@
     }
     echo '<a href="index.php"><div class="blok '.$index.'">Odpowiedzi</div></a>';
     echo '<a href="zwroty.php"><div class="blok '.$zwroty.'">Zwrot</div></a>';
+    if($zwroty == "active")
+    {
+        echo '<a href="zwroty.php"><div class="blok '.$zwroty.'">Archiwum</div></a>';
+    }
+    else{}
     echo '<a href="wymiary.php"><div class="blok '.$wymiary.'">Wymiary Paczek</div></a>';
     echo '<a href="paczki.php"><div class="blok '.$paczki.'">Koszty Spedycyjne</div></a>';
     echo '<a href="magazyn.php"><div class="blok '.$magazyn.'">Magazyn</div></a>';
