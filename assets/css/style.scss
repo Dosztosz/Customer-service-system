@@ -226,3 +226,14 @@
                 width: 60vw;
             }
         }
+@media print {
+    .tabela table,
+        tr {
+            align-content: center;
+            border: solid 1px rgb(226, 226, 226);
+        }
+        
+        tr:nth-child(even) {
+            background-color: #ecfaff;
+        }
+}
