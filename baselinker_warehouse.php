@@ -18,16 +18,6 @@ header("Content-Type: text/html;charset=UTF-8");
 
 <!DOCTYPE html>
 <html lang="en">
-<Style>
-@media print {
-  * {
-    display: none;
-  }
-  #printableTable {
-    display: block;
-  }
-}
-    </style>
 <head>
 <title>Magazyn</title>
 <?php
@@ -62,15 +52,20 @@ require "addons/head.php";
             <a href="baselinker_warehouse.php?paint=Antracyt"><button class="Button Button--outline">Szary</button></a>
             <a href="baselinker_warehouse.php?paint=Złoty"><button class="Button Button--outline">Złoty</button></a>
             <a href="baselinker_warehouse.php"><button class="Button Button--outline">Wyczyść Filtr</button></a>
+            <form method="get" action="functions/print.php">
+            <input type="submit" value="Submit">
+
             <div id="printableTable">
               <table id="myTable">
                 <thead>
+                  <th>Wybierz</th>
                   <th>Nazwa</th>
                   <th>Profil</th>
                   <th>Rozmiar</th>
                   <th>Kolor</th>
                   <th>Ilość</th>
                 </thead>
+
                   <?php
                       while($row = $result->fetch_assoc()) {
                           $id = $row['ID'];
@@ -79,26 +74,35 @@ require "addons/head.php";
                           $rozmiar = $row['Rozmiar'];
                           $kolory = $row['Kolor'];
                           $ilosc = $row['Ilosc'];
+                          $import = "<tr>
+                          <td>$nazwa</td>
+                          <td>$profil</td>
+                          <td>$rozmiar</td>
+                          <td>$kolory</td>
+                          <td>$ilosc szt</td>
+                          </tr>";
                           if ($ilosc <= 2) {
                               if($kolory != "Stal")
                               {
-                              echo "<tr>";
-                              echo '<td class="reszta">'.$nazwa.'</td>
-                              <td class="reszta">'.$profil.'</td>
-                              <td class="reszta">'.$rozmiar.'</td>
-                              <td class="reszta">'.$kolory.'</td>';
-                              echo '<td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'&naz='.$nazwa.'>'.$ilosc.' szt</a></td>';
-                              echo "</tr>";
+                                echo '
+                                <td class="reszta"><input type="checkbox" name="nazwa[]" value="'.$import.'"></td>
+                                <td class="reszta">'.$nazwa.'</td>
+                                <td class="reszta">'.$profil.'</td>
+                                <td class="reszta">'.$rozmiar.'</td>
+                                <td class="reszta">'.$kolory.'</td>
+                                <td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'&naz='.$nazwa.'>'.$ilosc.' szt</a></td>
+                                </tr>';
                               }
                               elseif($kolory == "Stal" && $ilosc < 0)
                               {
-                                  echo "<tr>";
-                                  echo '<td class="reszta">'.$nazwa.'</td>
-                                  <td class="reszta">'.$profil.'</td>
-                                  <td class="reszta">'.$rozmiar.'</td>
-                                  <td class="reszta">'.$kolory.'</td>';
-                                  echo '<td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'&naz='.$nazwa.'>'.$ilosc.' szt</a></td>';
-                                  echo "</tr>";
+                                echo '
+                                <td class="reszta"><input type="checkbox" name="nazwa[]" value="'.$import.'"></td>
+                                <td class="reszta">'.$nazwa.'</td>
+                                <td class="reszta">'.$profil.'</td>
+                                <td class="reszta">'.$rozmiar.'</td>
+                                <td class="reszta">'.$kolory.'</td>
+                                <td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'&naz='.$nazwa.'>'.$ilosc.' szt</a></td>
+                                </tr>';
                               }
                           }
                       }
