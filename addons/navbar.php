@@ -39,7 +39,7 @@
     echo '<a href="zwroty.php"><div class="blok '.$zwroty.'">Zwrot</div></a>';
     if($zwroty == "active")
     {
-        echo '<a href="zwroty.php"><div class="blok '.$zwroty.'">Archiwum</div></a>';
+        echo '<a href="archiwum_zwroty.php"><div class="blok '.$zwroty.'">Archiwum</div></a>';
     }
     else{}
     echo '<a href="wymiary.php"><div class="blok '.$wymiary.'">Wymiary Paczek</div></a>';
