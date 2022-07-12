@@ -1,8 +1,6 @@
 <?php
     header("Content-Type: text/html;charset=UTF-8");
     require "connect.php";
-    $conn = new mysqli($host, $db_user, $db_password, $db_name);
-    $conn->set_charset("utf8");
     $sql = "SELECT * FROM wymiary;";
 	$result = $conn->query($sql);
     $site = "wymiary";
@@ -14,19 +12,13 @@
 
 <head>
 <title>Wymiary Paczek</title>
-    <?php
-    require "addons/head.php"
-    ?>
+    <?php require "addons/head.php"?>
 </head>
 
 <body>
-<?php
-    require 'addons/title.php'
-?>
+<?php require 'addons/title.php'?>
 <div class="row">
-<?php
-    require 'addons/navbar.php'
-    ?>
+<?php require 'addons/navbar.php'?>
     <div class="col-11">
 
         <div class="row odstep bialy cien">

@@ -1,4 +1,4 @@
 <?php
-/*Here Paste your Baslinker Tokren */
+/*Here Paste your Baslinker Token */
 $token = "";
 ?>

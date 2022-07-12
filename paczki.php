@@ -1,9 +1,7 @@
 <?php
 header("Content-Type: text/html;charset=UTF-8");
     require "connect.php";
-    $conn = new mysqli($host, $db_user, $db_password, $db_name);
     $sql = "SELECT * FROM paczki;";
-    $conn->set_charset("utf8");
 	$result = $conn->query($sql);
     $site = "paczki";
     ?>
@@ -22,13 +20,9 @@ require "addons/head.php";
 
 <body>
     <!--navbar-->
-    <?php
-    require 'addons/title.php'
-?>
+    <?php require 'addons/title.php'?>
 <div class="row">
-    <?php
-    require 'addons/navbar.php'
-    ?>
+    <?php require 'addons/navbar.php'?>
     <div class="col-11">
         <div class="row odstep bialy cien">
             <h1 class="srodek">Gdzie wysyłać paczki i czym</h1>

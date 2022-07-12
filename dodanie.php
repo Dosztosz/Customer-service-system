@@ -7,7 +7,6 @@ $site = "odpowiedzi";
 
     if (isset($_POST['nazwa']))
 	{
-		
 		//sprawdzanie nazwaname
         $nazwa = $_POST['nazwa'];
 		$niemiecki = $_POST['niemiecki'];
@@ -19,7 +18,6 @@ $site = "odpowiedzi";
         if($conn->query("INSERT INTO `skroty` (`id`, `Nazwa`, `niemiecki`, `francuski`, `wloski`, `polski`, `angielski`) VALUES (NULL,'$nazwa','$niemiecki', '$francuski', '$wloski', '$polski', '$angielski');"))
         {
             header('Location: index.php');
-            
     }
     else
     {

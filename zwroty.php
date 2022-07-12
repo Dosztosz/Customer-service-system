@@ -12,19 +12,13 @@
 
 <head>
 <title>Zwroty Klienci</title>
-    <?php
-    require "addons/head.php"
-    ?>
+    <?php require "addons/head.php"?>
 </head>
 
 <body>
-<?php
-    require 'addons/title.php'
-?>
+<?php require 'addons/title.php'?>
 <div class="row">
-<?php
-    require 'addons/navbar.php'
-    ?>
+<?php require 'addons/navbar.php'?>
     <div class="col-11">
 
         <div class="row odstep bialy cien">

@@ -1,12 +1,9 @@
 <?php
     require "connect.php";
-    $conn = new mysqli($host, $db_user, $db_password, $db_name);
-    $conn->set_charset("utf8");
     $site="faq";
 
     if (isset($_POST['nazwa']))
 	{
-		
 		//sprawdzanie nazwaname
         $nazwa = $_POST['nazwa'];
 		$tresc = $_POST['tresc'];

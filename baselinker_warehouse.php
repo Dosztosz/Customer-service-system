@@ -1,7 +1,6 @@
 <?php
-header("Content-Type: text/html;charset=UTF-8");
+    header("Content-Type: text/html;charset=UTF-8");
     require "connect.php";
-    $conn = new mysqli($host, $db_user, $db_password, $db_name);
     if(isset($_GET['paint']))
     {
       $kolor = $_GET['paint'];
@@ -10,18 +9,14 @@ header("Content-Type: text/html;charset=UTF-8");
     else{
       $sql = "SELECT * FROM warehouse_baselinker;";
     }
-    $conn->set_charset("utf8");
 	  $result = $conn->query($sql);
     $site = "baselinker";
     ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Magazyn</title>
 <?php
-
 require "addons/head.php";
 ?>
 <link href="assets/css/style.css" rel="stylesheet" media="print">

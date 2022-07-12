@@ -28,9 +28,6 @@
         case "zwroty":
             $zwroty = "active";
             break;
-        case "staty":
-            $staty = "active";
-            break;
         case "baselinker";
             $baselinker = "active";
             break;
@@ -47,7 +44,6 @@
     echo '<a href="magazyn.php"><div class="blok '.$magazyn.'">Magazyn</div></a>';
     echo '<a href="magazyn_biuro.php"><div class="blok '.$magazyn_biuro.'">Magazyn biuro</div></a>';
     echo '<a href="baselinker_warehouse.php"><div class="blok '.$baselinker.'">Mag Baselinker</div></a>';
-    echo '<a href="stats.php"><div class="blok '.$staty.'">Statystyki</div></a>';
     echo '<a href="faq.php"><div class="blok '.$faq.'">FAQ</div></a>';
 ?>
     </div>

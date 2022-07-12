@@ -1,8 +1,6 @@
 <?php
     header("Content-Type: text/html;charset=UTF-8");
     require "connect.php";
-    $conn = new mysqli($host, $db_user, $db_password, $db_name);
-    $conn->set_charset("utf8");
     $sql = "SELECT * FROM skroty;";
 	$result = $conn->query($sql);
     $site = "skroty";
@@ -39,8 +37,6 @@
             <hr>
             <a href="dodanie.php"><button>Stwórz odpowiedź</button></a>
         <?php
-                    
-
                     while($row = $result->fetch_assoc()) {
                         $id = $row['id'];
                         $nazwa = $row['Nazwa'];

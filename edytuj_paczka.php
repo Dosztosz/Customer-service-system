@@ -34,13 +34,14 @@ if (isset($_POST['nazwa']))
                 }
                 else
                 {
-                    echo "no coś ci nie idzie";
+                    echo '<script language="javascript">';
+                    echo 'alert("Funkcja Czasowo Niedostępna, Zgłoś Błąd do IT")';
+                    echo '</script>';
                     echo $conn;
                 }
             }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
