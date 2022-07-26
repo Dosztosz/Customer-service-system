@@ -2,8 +2,6 @@
 header("Content-Type: text/html;charset=UTF-8");
 $site = "odpowiedzi";
     require "connect.php";
-    $conn = new mysqli($host, $db_user, $db_password, $db_name);
-    $conn->set_charset("utf8");
 
     if (isset($_POST['nazwa']))
 	{

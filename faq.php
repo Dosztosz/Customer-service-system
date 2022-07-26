@@ -1,9 +1,7 @@
 <?php
 header("Content-Type: text/html;charset=UTF-8");
     require "connect.php";
-    $conn = new mysqli($host, $db_user, $db_password, $db_name);
     $sql = "SELECT * FROM faq;";
-    $conn->set_charset("utf8");
 	$result = $conn->query($sql);
     $site = "faq";
     ?>
