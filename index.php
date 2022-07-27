@@ -29,7 +29,6 @@
     require 'addons/navbar.php';
     ?>
     <div class="col-11">
-
         <div class="row odstep bialy cien">
             <div class="col-6 odpowiedzi">
                 <!--wypis odpowiedzi-->
