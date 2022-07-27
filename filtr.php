@@ -7,6 +7,30 @@ header("Content-Type: text/html;charset=UTF-8");
     $conn->set_charset("utf8");
 	  $result = $conn->query($sql);
     $site = "magazyn_biuro";
+    $kolumna = $_GET['kolumna'];
+    switch($kolumna){
+      case "czas_jest":
+        $amazon = "active";
+        break;
+      case "ebay":
+        $ebay = "active";
+        break;
+      case "shopper":
+        $shopper = "active";
+        break;
+      case "kaufland":
+        $kaufland = "active";
+        break;
+      case "cdiscount":
+        $cdiscount = "active";
+        break;
+      case "etsy":
+        $etsy = "active";
+        break;
+      case "allegro":
+        $allegro = "active";
+        break;
+    }
     ?>
 
 
@@ -37,46 +61,29 @@ require "addons/head.php";
             <div class="col-11">
                 <!--wypis produktow-->
             <h1 class="srodek">Magazyn Biuro</h1>
-            <hr>
+            <ul class="nav nav-tabs">
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="magazyn_biuro.php">Pokaż Wszystkie</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $amazon ?>" aria-current="page" href="filtr.php?kolumna=czas_jest">Amazon</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $ebay ?>" aria-current="page" href="filtr.php?kolumna=ebay">Ebay</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $shopper ?>" aria-current="page" href="filtr.php?kolumna=shopper">Shopper</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $kaufland ?>" aria-current="page" href="filtr.php?kolumna=kaufland">Kaufland</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $cdiscount ?>" aria-current="page" href="filtr.php?kolumna=cdiscount">Cdiscount</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $etsy ?>" aria-current="page" href="filtr.php?kolumna=etsy">Etsy</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $allegro ?>" aria-current="page" href="filtr.php?kolumna=allegro">Allegro</a></li>
+            </ul>
             <!--wyszukiwani-->
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Wyszukaj...">
-            <a href="nowy_produkt.php"><button>Dodaj produkt (nie działa)</button></a>
-            <!--Harmonijka-->
-            <button class="sortowanie">Wyświetl niezgodne</button>
-            <div class="sortowanie_out">
-            <a href="filtr.php?kolumna=amazon"><button>Amazon</button></a>
-            <a href="filtr.php?kolumna=ebay"><button>Ebay</button></a>
-            <a href="filtr.php?kolumna=shopper"><button>Shopper</button></a>
-            <a href="filtr.php?kolumna=kaufland"><button>Kaufland</button></a>
-            <a href="filtr.php?kolumna=cdiscount"><button>Cdiscount</button></a>
-            <a href="filtr.php?kolumna=etsy"><button>Etsy</button></a>
-            <a href="filtr.php?kolumna=allegro"><button>Allegro</button></a>
+            <div class="searchbar p-2">
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Wyszukaj...">
             </div>
-            <script>
-            var acc = document.getElementsByClassName("sortowanie");
-            var i;
-
-            for (i = 0; i < acc.length; i++) {
-              acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                  panel.style.display = "none";
-                } else {
-                  panel.style.display = "block";
-                }
-              });
-            }
-            </script>
             <!--Tabela-->
             <table class="table table-striped" id="myTable">
-              <tr>
-                <td>Nazwa</td>
-                <td>Ilość</td>
-                <td>Czas wysyłki</td>
-                <td>Amazon</td>
+              <thead>
+                <th>Nazwa</th>
+                <th>Ilość</th>
+                <th>Dostawa</th>
+                <th>Amazon</th>
 
-              </tr>
+              </thead>
 
         <?php
                     while($row = $result->fetch_assoc()) {
@@ -94,67 +101,45 @@ require "addons/head.php";
                       $etsy = $row['etsy'];
                       $allegro = $row['allegro'];
                       $amzde = "kebs";
-                      $kolor_klasa = "none";
-                      $kolor_klasa1 = "none";
-                      $kolor_klasa2 = "none";
-                      $kolor_klasa3 = "none";
-                      $kolor_klasa4 = "none";
-                      $kolor_klasa5 = "none";
-                      $kolor_klasa6 = "none";
-                        if($kolumna == "czas_jest")
-                        {
+                      switch ($kolumna) {
+                        case 'czas_jest':
                           $czas = $row['czas_jest'];
-                        }
-                        elseif ($kolumna =="ebay")
-                        {
+                          break;
+                        case 'ebay':
                           $czas = $row['ebay'];
-                        }
-                        elseif ($kolumna =="shopper")
-                        {
+                          break;
+                        case 'shopper':
                           $czas = $row['shopper'];
-                        }
-                        elseif ($kolumna =="kaufland")
-                        {
+                          break;
+                        case 'kaufland':
                           $czas = $row['kaufland'];
-                        }
-                        elseif ($kolumna =="cdiscount")
-                        {
+                          break;
+                        case 'cdiscount':
                           $czas = $row['cdiscount'];
-                        }
-                        elseif ($kolumna =="etsy")
-                        {
+                          break;
+                        case 'etsy':
                           $czas = $row['etsy'];
-                        }
-                        elseif ($kolumna =="allegro")
-                        {
+                          break;
+                        case 'allegro':
                           $czas = $row['allegro'];
-                        }
-
+                          break;    
+                      }
                         if (empty($czas_jest))
                         {
                           $czas_jest = "none";
                         }
                         if ($ilosc <= 5 AND $ilosc >= 1) {
-                          $kolor = "bg-warning";
+                          $kolor = "bg-warning font-active";
                           $czas_powinien = "7";
                         }
                         elseif ($ilosc <= 0)
                         {
-                          $kolor = "bg-danger";
+                          $kolor = "bg-danger font-active";
                           $czas_powinien = "20";
-                        }
-                        elseif ($ilosc > 5)
-                        {
-                          $kolor ="zielony";
-                          $czas_powinien = "1";
                         }
                         if ($ilosc >5 )
                         {
                           $czas_powinien = "1";
-                        }
-                        if ($czas == $czas_powinien)
-                        {
-                          $kolor_klasa = $kolor;
                         }
                         if ($czas == $czas_powinien){}
                         else {

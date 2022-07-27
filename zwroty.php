@@ -51,15 +51,15 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
-            <table class="table table-striped">
-                <tr>
+            <table class="table table-hover">
+                <thead>
                     <th style="width: 12%; margin-right: 5px;">Nazwa Klienta BS</td>
                     <th>Numer Zamówienia BS</th>
                     <th>Numer Śledzenia</th>
                     <th>Data Zwrotu Produktu</th>
                     <th>Notatka</th>
                     <th>Zakończ</th>
-                </tr>
+                </thead>
             <?php
                 while($row = $result->fetch_assoc()) {
                     $id = $row['ID'];

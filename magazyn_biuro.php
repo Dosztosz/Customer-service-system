@@ -33,49 +33,32 @@ require "addons/head.php";
             <div class="col-11">
                 <!--wypis produktow-->
             <h1 class="srodek">Magazyn Biuro</h1>
-            <hr>
+            <ul class="nav nav-tabs">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="magazyn_biuro.php">Pokaż Wszystkie</a></li>
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=czas_jest">Amazon</a></li>
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=ebay">Ebay</a></li>
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=shopper">Shopper</a></li>
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=kaufland">Kaufland</a></li>
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=cdiscount">Cdiscount</a></li>
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=etsy">Etsy</a></li>
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=allegro">Allegro</a></li>
+            </ul>
             <!--wyszukiwani-->
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Wyszukaj...">
-            <a href="nowy_produkt.php"><button>Dodaj produkt (nie działa)</button></a>
-            <!--Harmonijka-->
-            <button class="sortowanie">Wyświetl niezgodne</button>
-            <div class="sortowanie_out">
-            <a href="filtr.php?kolumna=czas_jest"><button>Amazon</button></a>
-            <a href="filtr.php?kolumna=ebay"><button>Ebay</button></a>
-            <a href="filtr.php?kolumna=shopper"><button>Shopper</button></a>
-            <a href="filtr.php?kolumna=kaufland"><button>Kaufland</button></a>
-            <a href="filtr.php?kolumna=cdiscount"><button>Cdiscount</button></a>
-            <a href="filtr.php?kolumna=etsy"><button>Etsy</button></a>
-            <a href="filtr.php?kolumna=allegro"><button>Allegro</button></a>
+            <div class="searchbar p-2">
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Wyszukaj...">
             </div>
-            <script>
-            var acc = document.getElementsByClassName("sortowanie");
-            var i;
-
-            for (i = 0; i < acc.length; i++) {
-              acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                  panel.style.display = "none";
-                } else {
-                  panel.style.display = "block";
-                }
-              });
-            }
-            </script>
             <!--Tabela-->
             <table class="table table-hover" id="myTable">
-              <tr>
-                <td>Nazwa</td>
-                <td>Ilość</td>
-                <td>Czas wysyłki</td>
-                <td>Amazon</td>
-                <td>Shop</td>
-                <td>Kauf</td>
-                <td>All</td>
+              <thead>
+                <th>Nazwa</th>
+                <th>Ilość</th>
+                <th>Dostawa</th>
+                <th>Amazon</th>
+                <th>Shoper</th>
+                <th>Kaufland</th>
+                <th>Allegro</th>
 
-              </tr>
+              </thead>
 
         <?php
                   while($row = $result->fetch_assoc()) {
@@ -92,14 +75,6 @@ require "addons/head.php";
                     $cdiscount = $row['cdiscount'];
                     $etsy = $row['etsy'];
                     $allegro = $row['allegro'];
-                    $amzde = "kebs";
-                    $kolor_klasa = "none";
-                    $kolor_klasa1 = "none";
-                    $kolor_klasa2 = "none";
-                    $kolor_klasa3 = "none";
-                    $kolor_klasa4 = "none";
-                    $kolor_klasa5 = "none";
-                    $kolor_klasa6 = "none";
                     if (empty($czas_jest))
                     {
                       $czas_jest = "none";
@@ -118,48 +93,16 @@ require "addons/head.php";
                       $kolor ="zielony";
                       $czas_powinien = "1";
                     }
-                    if ($ilosc >5 )
-                    {
-                      $czas_powinien = "1";
-                    }
-                    if ($czas_jest == $czas_powinien)
-                    {
-                      $kolor_klasa = $kolor;
-                    }
-                    if ($ebay == $czas_powinien)
-                    {
-                      $kolor_klasa1 = $kolor;
-                    }
-                    if ($shopper == $czas_powinien)
-                    {
-                      $kolor_klasa2 = $kolor;
-                    }
-                    if ($kaufland == $czas_powinien)
-                    {
-                      $kolor_klasa3 = $kolor;
-                    }
-                    if ($cdiscount == $czas_powinien)
-                    {
-                      $kolor_klasa4 = $kolor;
-                    }
-                    if ($etsy == $czas_powinien)
-                    {
-                      $kolor_klasa5 = $kolor;
-                    }
-                    if ($allegro == $czas_powinien)
-                    {
-                      $kolor_klasa6 = $kolor;
-                    }
                     if($nazwa != "Siedzisko")
                     {
                       echo "<tr>";
                       echo '<td class="duze">'.$nazwa.' | '.$profil.' | '.$rozmiar.' | '.$kolory.'</td>';
                       echo '<td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'>'.$ilosc.' szt</a></td>';
-                      echo '<td class="reszta '.$kolor.'">'.$czas_powinien.' dni</td>';
-                      echo '<td class="reszta '.$kolor_klasa.'">'.$czas_jest.' dni</td>';
-                      echo '<td class="reszta '.$kolor_klasa2.'">'.$shopper.' dni</td>';
-                      echo '<td class="reszta '.$kolor_klasa3.'">'.$kaufland.' dni</td>';
-                      echo '<td class="reszta '.$kolor_klasa6.'">'.$allegro.' dni</td>';
+                      echo '<td class="reszta">'.$czas_powinien.' dni</td>';
+                      echo '<td class="reszta">'.$czas_jest.' dni</td>';
+                      echo '<td class="reszta">'.$shopper.' dni</td>';
+                      echo '<td class="reszta">'.$kaufland.' dni</td>';
+                      echo '<td class="reszta">'.$allegro.' dni</td>';
                       echo '<td class="reszta"><a href = update_marketplace.php?id='.$id.'&il='.$czas_jest.'&eb='.$ebay.'&sh='.$shopper.'&kauf='.$kaufland.'&cdi='.$cdiscount.'&etsy='.$etsy.'&all='.$allegro.'>Update</a></td>';
                       echo "</tr>";
                       }

@@ -29,16 +29,16 @@ require "addons/head.php";
             <hr>
             <h3 class="srodek">Paczki</h3>
             <table class="table table-striped">
-                <tr>
-                    <td class="kurierzy"></td>
-                    <td>do 2 kg</td>
-                    <td >do 5 kg</td>
-                    <td>do 10 kg</td>
-                    <td>do 15 kg</td>
-                    <td>do 25 kg</td>
-                    <td>do 30 kg</td>
-                    <td>do 40 kg</td>
-                </tr>
+                <thead>
+                    <th class="kurierzy">Kraj</th>
+                    <th>do 2 kg</th>
+                    <th >do 5 kg</th>
+                    <th>do 10 kg</th>
+                    <th>do 15 kg</th>
+                    <th>do 25 kg</th>
+                    <th>do 30 kg</th>
+                    <th>do 40 kg</th>
+                </thead>
                 <?php
                         while($row = $result->fetch_assoc()) {
                             $kraj = $row['kraj'];

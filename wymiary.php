@@ -54,17 +54,17 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
-            <table class="tabela">
-                <tr>
-                    <td style="width: 12%; margin-right: 5px;">Nazwa</td>
-                    <td>Wymiar</td>
-                    <td>Waga</td>
-                    <td>US</td>
-                    <td style="width: 12%; margin-right: 5px;">Nazwa</td>
-                    <td>Wymiar</td>
-                    <td>Waga</td>
-                    <td>edycja</td>
-                </tr>
+            <table class="table table-hover">
+                <thead>
+                    <th style="width: 12%; margin-right: 5px;">Nazwa</th>
+                    <th>Wymiar</th>
+                    <th>Waga</th>
+                    <th>US</th>
+                    <th style="width: 12%; margin-right: 5px;">Nazwa</th>
+                    <th>Wymiar</th>
+                    <th>Waga</th>
+                    <th>edycja</th>
+                </thead>
             <?php
                 while($row = $result->fetch_assoc()) {
                     $id = $row['Id'];

@@ -1,12 +1,31 @@
 <?php
     header("Content-Type: text/html;charset=UTF-8");
     require "connect.php";
+    $all = $stal = $czarny = $bialy = $szary = $zloty = '';
     if(isset($_GET['paint']))
     {
       $kolor = $_GET['paint'];
       $sql = "SELECT * FROM warehouse_baselinker WHERE `Kolor` = '$kolor';";
+      switch($kolor){
+        case "Stal":
+          $stal = "active";
+          break;
+        case "Czarny":
+          $czarny = "active";
+          break;
+        case "Biały":
+          $bialy = "active";
+          break;
+        case "Antracyt":
+          $szary = "active";
+          break;
+        case "Złoty":
+          $zloty = "active";
+          break;
+      }
     }
     else{
+      $all = "active";
       $sql = "SELECT * FROM warehouse_baselinker;";
     }
 	  $result = $conn->query($sql);
@@ -35,24 +54,23 @@ require "addons/head.php";
 
         <div class="row odstep bialy cien">
             <div class="col-11">
-                <!--wypis produktow-->
             <h1 class="srodek">Magazyn Produkcja</h1>
-            <hr>
-            <ul class="d-flex">
-              <li><a href="baselinker_warehouse.php">Pokaż Wszystkie</a></li>
-              <li><a href="baselinker_warehouse.php?paint=Stal">Stal</a></li>
-              <li><a href="baselinker_warehouse.php?paint=Czarny">Czarny</a></li>
-              <li><a href="baselinker_warehouse.php?paint=Biały">Biały</a></li>
-              <li><a href="baselinker_warehouse.php?paint=Antracyt">Szary</a></li>
-              <li><a href="baselinker_warehouse.php?paint=Złoty">Złoty</a></li>
+            <ul class="nav nav-tabs">
+              <li class="nav-item"><a class="nav-link <?php echo $all ?>" aria-current="page" href="baselinker_warehouse.php">Pokaż Wszystkie</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $stal ?>" aria-current="page" href="baselinker_warehouse.php?paint=Stal">Stal</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $czarny ?>" aria-current="page" href="baselinker_warehouse.php?paint=Czarny">Czarny</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $bialy ?>" aria-current="page" href="baselinker_warehouse.php?paint=Biały">Biały</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $szary ?>" aria-current="page" href="baselinker_warehouse.php?paint=Antracyt">Antracyt</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $zloty ?>" aria-current="page" href="baselinker_warehouse.php?paint=Złoty">Złoty</a></li>
             </ul>
-            <hr>
-            <button class="Button Button--outline" onclick="printDiv()">Wydrukuj</button>
-            <a href="functions/synchronization.php"><button class="Button Button--outline">Synchronizacja z magazynem</button></a>
-            <form method="get" action="functions/print.php">
-            <input type="submit" value="Submit">
-
+            <div class="filtr p-2" style="border-top: 1px solid black; border-bottom: 1px solid black; margin: 0;">
+              <button class="Button Button--outline" onclick="printDiv()">Wydrukuj</button>
+              <a href="functions/synchronization.php"><button class="Button Button--outline">Synchronizacja z magazynem</button></a>
+              <form method="get" action="functions/print.php">
+              <button class="Button Button--outline" type="submit">Wydrukuj zaznaczone</button>
+            </div>
             <div id="printableTable">
+              
               <table  class="table table-hover" id="myTable">
                 <thead>
                   <th>Wybierz</th>
@@ -62,7 +80,6 @@ require "addons/head.php";
                   <th>Kolor</th>
                   <th>Ilość</th>
                 </thead>
-
                   <?php
                       while($row = $result->fetch_assoc()) {
                           $id = $row['ID'];

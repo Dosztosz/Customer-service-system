@@ -29,15 +29,15 @@
         <div class="row odstep bialy cien">
             <div>
             <h1 class="srodek">Archiwum Zwrotów</h1>
-            <table class="tabela">
-                <tr>
-                    <td style="width: 12%; margin-right: 5px;">Nazwa Klienta BS</td>
-                    <td>Numer Zamówienia BS</td>
-                    <td>Numer Śledzenia</td>
-                    <td>Data Zwrotu Produktu</td>
-                    <td>Notatka</td>
-                    <td>Zakończ / Przywróć</td>
-                </tr>
+            <table class="table table-hover">
+                <thead>
+                    <th style="width: 12%; margin-right: 5px;">Nazwa Klienta BS</th>
+                    <th>Numer Zamówienia BS</th>
+                    <th>Numer Śledzenia</th>
+                    <th>Data Zwrotu Produktu</th>
+                    <th>Notatka</th>
+                    <th>Zakończ / Przywróć</th>
+                </thead>
             <?php
                 while($row = $result->fetch_assoc()) {
                     $id = $row['ID'];

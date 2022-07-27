@@ -33,8 +33,6 @@ if (isset($_POST['ilosc']))
     $czas_jest_nowa=$_POST['ilosc'];
     require_once "../connect.php";
 	mysqli_report(MYSQLI_REPORT_STRICT);
-    $conn = new mysqli($host, $db_user, $db_password, $db_name);
-    $conn->set_charset("utf8");
     if ($conn->connect_errno!=0)
 			{
 				echo "nie dziala";
