@@ -14,15 +14,13 @@ if (isset($_POST['nazwa_up']))
         $notatka_up = $_POST['notatka_up'];
         require_once "../connect.php";
         mysqli_report(MYSQLI_REPORT_STRICT);
-        $connect = new mysqli($host, $db_user, $db_password, $db_name);
-        $connect->set_charset("utf8");
-        if ($connect->connect_errno!=0)
+        if ($conn->conn_errno!=0)
                 {
                     echo "nie dziala polaczenie";
                 }
         else 
         {
-            if($connect->query("INSERT INTO `zwroty` (`ID`, `klient`, `nr_zamowienia`, `nr_sledzenia`, `data_zwrotu`, `notatka`, `kategoria`) VALUES (NULL, '$nazwa_up', '$nr_zamowien_up', '$nr_sledzenia_up', '$data_zwrot_up', '$notatka_up', 'a');"))
+            if($conn->query("INSERT INTO `zwroty` (`ID`, `klient`, `nr_zamowienia`, `nr_sledzenia`, `data_zwrotu`, `notatka`, `kategoria`) VALUES (NULL, '$nazwa_up', '$nr_zamowien_up', '$nr_sledzenia_up', '$data_zwrot_up', '$notatka_up', 'a');"))
             {
                 header('Location: ../zwroty.php');
             }

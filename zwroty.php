@@ -29,7 +29,7 @@
                         <input name="nazwa_up" type="text" placeholder="Nazwa Klienta" required><br>
                         <input name="nr_zamowien_up" type="text" placeholder="Numer Zamówienia" required><br>
                         <input name="nr_sledzenia_up" type="text" placeholder="Numer Śledzenia" required><br>
-                        <input name="data_zwrot_up" type="text" placeholder="Data Zwrotu Produktu" required><br>
+                        <input name="data_zwrot_up" type="date" placeholder="Data Zwrotu Produktu" required><br>
                         <input name="notatka_up" type="text" placeholder="Notatka" required>
                         <input type="submit" value="Dodaj" >
 		            </div>
