@@ -3,7 +3,6 @@ header("Content-Type: text/html;charset=UTF-8");
 
     $kolumna = $_GET['kolumna'];
     require "connect.php";
-    $conn = new mysqli($host, $db_user, $db_password, $db_name);
     $sql = "SELECT * FROM karosek;";
     $conn->set_charset("utf8");
 	  $result = $conn->query($sql);
@@ -70,7 +69,7 @@ require "addons/head.php";
             }
             </script>
             <!--Tabela-->
-            <table id="myTable">
+            <table class="table table-striped" id="myTable">
               <tr>
                 <td>Nazwa</td>
                 <td>Ilość</td>
@@ -136,12 +135,12 @@ require "addons/head.php";
                           $czas_jest = "none";
                         }
                         if ($ilosc <= 5 AND $ilosc >= 1) {
-                          $kolor = "zolty";
+                          $kolor = "bg-warning";
                           $czas_powinien = "7";
                         }
                         elseif ($ilosc <= 0)
                         {
-                          $kolor = "czerwony";
+                          $kolor = "bg-danger";
                           $czas_powinien = "20";
                         }
                         elseif ($ilosc > 5)
@@ -163,9 +162,9 @@ require "addons/head.php";
                           {
                             echo "<tr>";
                             echo '<td class="duze">'.$nazwa.' | '.$profil.' | '.$rozmiar.' | '.$kolory.'</td>';
-                            echo '<td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'>'.$ilosc.' szt</a></td>';
-                            echo '<td class="reszta '.$kolor.'">'.$czas_powinien.' dni</td>';
-                            echo '<td class="reszta '.$kolor_klasa.'"><a href = commands/update_pojedynczy.php?id='.$id.'&il='.$czas.'&kol='.$kolumna.'>'.$czas.' dni</a></td>';
+                            echo '<td class="reszta">'.$ilosc.' szt</td>';
+                            echo '<td class="reszta">'.$czas_powinien.' dni</td>';
+                            echo '<td class="reszta '.$kolor.'"><a href = commands/update_pojedynczy.php?id='.$id.'&il='.$czas.'&kol='.$kolumna.'>'.$czas.' dni</a></td>';
                             echo '<td class="reszta"><a href = commands/zatwierdz.php?id='.$id.'&il='.$czas.'&kol='.$kolumna.'&pow='.$czas_powinien.'>Zatwierdź</a></td>';
                             echo "</tr>";
                           }

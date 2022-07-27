@@ -65,7 +65,7 @@ require "addons/head.php";
             }
             </script>
             <!--Tabela-->
-            <table id="myTable">
+            <table class="table table-hover" id="myTable">
               <tr>
                 <td>Nazwa</td>
                 <td>Ilość</td>

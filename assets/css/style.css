@@ -144,17 +144,6 @@ a {
   width: 4%;
 }
 
-.tabela table,
-tr {
-  -ms-flex-line-pack: center;
-      align-content: center;
-  border: solid 1px #e2e2e2;
-}
-
-tr:nth-child(even) {
-  background-color: #ecfaff;
-}
-
 .kurierzy td {
   padding-right: 30px;
 }
@@ -235,17 +224,5 @@ tr:nth-child(even) {
 
 .faq_image img {
   width: 60vw;
-}
-
-@media print {
-  .tabela table,
-  tr {
-    -ms-flex-line-pack: center;
-        align-content: center;
-    border: solid 1px #e2e2e2;
-  }
-  tr:nth-child(even) {
-    background-color: #ecfaff;
-  }
 }
 /*# sourceMappingURL=style.css.map */

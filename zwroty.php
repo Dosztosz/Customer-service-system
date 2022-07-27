@@ -51,14 +51,14 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
-            <table class="tabela">
+            <table class="table table-striped">
                 <tr>
-                    <td style="width: 12%; margin-right: 5px;">Nazwa Klienta BS</td>
-                    <td>Numer Zamówienia BS</td>
-                    <td>Numer Śledzenia</td>
-                    <td>Data Zwrotu Produktu</td>
-                    <td>Notatka</td>
-                    <td>Przenieś do archiwum</td>
+                    <th style="width: 12%; margin-right: 5px;">Nazwa Klienta BS</td>
+                    <th>Numer Zamówienia BS</th>
+                    <th>Numer Śledzenia</th>
+                    <th>Data Zwrotu Produktu</th>
+                    <th>Notatka</th>
+                    <th>Zakończ</th>
                 </tr>
             <?php
                 while($row = $result->fetch_assoc()) {

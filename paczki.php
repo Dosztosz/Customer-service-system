@@ -28,7 +28,7 @@ require "addons/head.php";
             <h1 class="srodek">Gdzie wysyłać paczki i czym</h1>
             <hr>
             <h3 class="srodek">Paczki</h3>
-            <table class="tabela">
+            <table class="table table-striped">
                 <tr>
                     <td class="kurierzy"></td>
                     <td>do 2 kg</td>

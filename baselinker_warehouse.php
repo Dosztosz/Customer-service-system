@@ -38,20 +38,22 @@ require "addons/head.php";
                 <!--wypis produktow-->
             <h1 class="srodek">Magazyn Produkcja</h1>
             <hr>
+            <ul class="d-flex">
+              <li><a href="baselinker_warehouse.php">Pokaż Wszystkie</a></li>
+              <li><a href="baselinker_warehouse.php?paint=Stal">Stal</a></li>
+              <li><a href="baselinker_warehouse.php?paint=Czarny">Czarny</a></li>
+              <li><a href="baselinker_warehouse.php?paint=Biały">Biały</a></li>
+              <li><a href="baselinker_warehouse.php?paint=Antracyt">Szary</a></li>
+              <li><a href="baselinker_warehouse.php?paint=Złoty">Złoty</a></li>
+            </ul>
+            <hr>
             <button class="Button Button--outline" onclick="printDiv()">Wydrukuj</button>
             <a href="functions/synchronization.php"><button class="Button Button--outline">Synchronizacja z magazynem</button></a>
-            <p>Filtry:</p>
-            <a href="baselinker_warehouse.php?paint=Stal"><button class="Button Button--outline">Stal</button></a>
-            <a href="baselinker_warehouse.php?paint=Czarny"><button class="Button Button--outline">Czarny</button></a>
-            <a href="baselinker_warehouse.php?paint=Biały"><button class="Button Button--outline">Biały</button></a>
-            <a href="baselinker_warehouse.php?paint=Antracyt"><button class="Button Button--outline">Szary</button></a>
-            <a href="baselinker_warehouse.php?paint=Złoty"><button class="Button Button--outline">Złoty</button></a>
-            <a href="baselinker_warehouse.php"><button class="Button Button--outline">Wyczyść Filtr</button></a>
             <form method="get" action="functions/print.php">
             <input type="submit" value="Submit">
 
             <div id="printableTable">
-              <table id="myTable">
+              <table  class="table table-hover" id="myTable">
                 <thead>
                   <th>Wybierz</th>
                   <th>Nazwa</th>

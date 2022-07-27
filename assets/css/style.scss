@@ -136,16 +136,6 @@
             width: 4%;
         }
         
-        .tabela table,
-        tr {
-            align-content: center;
-            border: solid 1px rgb(226, 226, 226);
-        }
-        
-        tr:nth-child(even) {
-            background-color: #ecfaff;
-        }
-        
         .kurierzy td {
             padding-right: 30px;
         }
@@ -226,6 +216,20 @@
                 width: 60vw;
             }
         }
+
+/* TEST
+
+.tabela table,
+        tr {
+            align-content: center;
+            border: solid 1px rgb(226, 226, 226);
+        }
+        
+        tr:nth-child(even) {
+            background-color: #ecfaff;
+        }
+
+
 @media print {
     .tabela table,
         tr {
@@ -237,3 +241,4 @@
             background-color: #ecfaff;
         }
 }
+*?
