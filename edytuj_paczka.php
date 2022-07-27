@@ -21,8 +21,6 @@ if (isset($_POST['nazwa']))
     $kategoria_n = $_POST['kategoria'];
     require_once "connect.php";
 	mysqli_report(MYSQLI_REPORT_STRICT);
-    $conn = new mysqli($host, $db_user, $db_password, $db_name);
-    $conn->set_charset("utf8");
     if ($conn->connect_errno!=0)
 			{
 				echo "bład";
@@ -30,7 +28,7 @@ if (isset($_POST['nazwa']))
             else {
                 if($conn->query("UPDATE `wymiary` SET `nazwa` = '$nazwa_n', `wymiarcm` = '$wymiar_cm_n', `wagakg` = '$waga_kg_n', `wymiarcale` = '$wymiar_cale_n', `wagafunt` = '$waga_funt_n'  WHERE `Id` = $id;"))
                 {
-                    header('Location: wymiar.php');
+                    header('Location: wymiary.php');
                 }
                 else
                 {
