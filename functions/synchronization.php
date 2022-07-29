@@ -7,8 +7,6 @@ $methodParams = '{
 //polaczenie z mysql
 require_once "../connect.php";
 require_once "../api.php";
-$polaczenie = new mysqli($host, $db_user, $db_password, $db_name);
-
 //polaczenie z baselinkerem
 $apiParams = [
     "token" => $token,
@@ -35,7 +33,7 @@ foreach($out['products'] as $order){
     $id = $wariant['variant_id'];
     $ilosc = $wariant['quantity'];
     $sql = "UPDATE warehouse_baselinker SET ilosc = $ilosc WHERE id_baselinker=$id";
-    if(!mysqli_query($polaczenie, $sql))
+    if(!mysqli_query($conn, $sql))
         {
          die('Error : ' . mysql_error());
         }

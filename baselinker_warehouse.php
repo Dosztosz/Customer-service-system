@@ -115,7 +115,7 @@ require "addons/head.php";
                                 <td class="reszta">'.$profil.'</td>
                                 <td class="reszta">'.$rozmiar.'</td>
                                 <td class="reszta">'.$kolory.'</td>
-                                <td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'&naz='.$nazwa.'>'.$ilosc.' szt</a></td>
+                                <td class="reszta">'.$ilosc.' szt</a></td>
                                 </tr>';
                               }
                           }
