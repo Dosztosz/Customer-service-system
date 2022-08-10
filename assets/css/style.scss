@@ -1,8 +1,20 @@
         $border-radius: 15px;
         $kolor_przycisk: #202b3f;
         body {
-            background-color: #edf2f6;
+
             overflow-x: hidden;
+            animation: fadeInAnimation ease 0.5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
         .top {
             background-color: #3475ad;
@@ -226,28 +238,35 @@
             text-decoration: none;
         }
 
-/* TEST
-
-.tabela table,
-        tr {
-            align-content: center;
-            border: solid 1px rgb(226, 226, 226);
-        }
-        
-        tr:nth-child(even) {
-            background-color: #ecfaff;
-        }
 
 
-@media print {
-    .tabela table,
-        tr {
-            align-content: center;
-            border: solid 1px rgb(226, 226, 226);
+
+        .animacja {
+            border: 16px solid #293e57;
+            border-radius: 30%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s infinite;
         }
-        
-        tr:nth-child(even) {
-            background-color: #ecfaff;
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+                border-top: 10px solid #293e57;
+            }
+            25% {
+                transform: rotate(90deg);
+                border-top: 16px solid #45b3e0;
+            }
+            50% {
+                transform: rotate(180deg);
+                border-top: 10px solid #45b3e0;
+            }
+            75% {
+                transform: rotate(270deg);
+                border-top: 16px solid #45b3e0;
+            }
+            100% {
+                transform: rotate(360deg);
+                border-top: 10px solid #293e57;
+            }
         }
-}
-*?

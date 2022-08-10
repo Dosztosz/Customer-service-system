@@ -32,7 +32,7 @@ require "addons/head.php";
                 <thead>
                     <th class="kurierzy">Kraj</th>
                     <th>do 2 kg</th>
-                    <th >do 5 kg</th>
+                    <th>do 5 kg</th>
                     <th>do 10 kg</th>
                     <th>do 15 kg</th>
                     <th>do 25 kg</th>
@@ -64,39 +64,7 @@ require "addons/head.php";
                
             
         </table>
-        <h3 class="srodek">Ceny Palet</h3>
-            <table class="tabela">
-                <tr>
-                    <td class="kurierzy"></td>
-                    <td>do 2 kg</td>
-                    <td >do 5 kg</td>
-                    <td>do 10 kg</td>
-                    <td>do 15 kg</td>
-                    <td>do 25 kg</td>
-                    <td>do 30 kg</td>
-                    <td>do 40 kg</td>
-                </tr>
-                <?php
-                        while($row = $result->fetch_assoc()) {
-                            echo "<tr>";
-                            echo '<td class="kurierzy">'.$kraj.'</td>';
-                            echo "<td>".$dwa."</td>";
-                            echo "<td>".$piec."</td>";
-                            echo "<td>".$dziesiec."</td>";
-                            echo "<td>".$pietnascie."</td>";
-                            echo "<td>".$dwardziesciapiec."</td>";
-                            echo "<td>".$trzydziesci."</td>";
-                            echo "<td>".$czterdziesci."</td>";
-                            echo "</tr>";
-                        }
-                ?>
-               
-            
-        </table>
         </div>
-
-
-        
     </div>
 </div>
 </body>

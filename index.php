@@ -87,7 +87,6 @@
                     <input class="contactform-input input" type="text" id="contactform-stoopkicm" placeholder="Cm" name="kilogram" value="" onkeyup="stoopki_cm()" />
                     <span id="wynik_stoopki_cm"></span> ft
                 </div>
-                
                     <!--pole tekstowe-->
                 <h3>pole tekstowe</h3>
                 <textarea rows="25" cols="80"></textarea>

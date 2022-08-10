@@ -56,7 +56,6 @@ require "addons/head.php";
     require 'addons/navbar.php'
     ?>
     <div class="col-11">
-
         <div class="row odstep bialy cien">
             <div class="col-11">
                 <!--wypis produktow-->
@@ -76,7 +75,7 @@ require "addons/head.php";
               <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Wyszukaj...">
             </div>
             <!--Tabela-->
-            <table class="table table-striped" id="myTable">
+            <table class="table table-hover" id="myTable">
               <thead>
                 <th>Nazwa</th>
                 <th>Ilość</th>
