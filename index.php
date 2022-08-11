@@ -1,6 +1,5 @@
 <html>
 <?php
-
 include ("addons/head.php");
 include ("connect.php");
    session_start();
@@ -25,7 +24,6 @@ include ("connect.php");
        $error = "Your Login Name or Password is invalid";
     }
  }
-
 ?>
     <body>
         <div class="animacja"></div>
