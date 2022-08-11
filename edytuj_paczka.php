@@ -8,10 +8,6 @@ $waga_kg = $_GET['wagkg'];
 $wymiar_cale = $_GET['wymcal'];
 $wagafunt = $_GET['wagfunt'];
 $site = "wymiar";
-
-
-
-
 if (isset($_POST['nazwa']))
 {
     $nazwa_n = $_POST['nazwa'];
@@ -60,7 +56,7 @@ if (isset($_POST['nazwa']))
     require 'addons/navbar.php';
     ?>
     <div class="col-11">
-    <div class="row odstep bialy cien">
+    <div class="row bialy">
             <div class="col-6">
                 <!--wypis odpowiedzi-->
             <h1 class="srodek">Edycja Paczki</h1>

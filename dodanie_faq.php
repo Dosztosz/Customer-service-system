@@ -44,7 +44,7 @@
     ?>
     <div class="col-11">
 
-        <div class="row odstep bialy cien">
+        <div class="row bialy">
             <div class="col-6">
                 <!--wypis odpowiedzi-->
             <h1 class="srodek">Dodaj Odpowiedź</h1>

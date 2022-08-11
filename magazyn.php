@@ -30,7 +30,7 @@ require "addons/head.php";
     ?>
     <div class="col-11">
 
-        <div class="row odstep bialy cien">
+        <div class="row bialy">
             <div class="col-11">
                 <!--wypis produktow-->
             <h1 class="srodek">Magazyn na Karosku</h1>

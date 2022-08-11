@@ -25,7 +25,7 @@ require "addons/head.php";
 <div class="row">
     <?php require 'addons/navbar.php'?>
     <div class="col-11">
-        <div class="row odstep bialy cien">
+        <div class="row bialy">
             <h1 class="srodek">Gdzie wysyłać paczki i czym</h1>
             <hr>
             <h3 class="srodek">Paczki</h3>

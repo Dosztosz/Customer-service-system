@@ -12487,29 +12487,29 @@ fieldset:disabled .btn {
 /*************** HEADER ***************/
 body {
   overflow-x: hidden;
-  -webkit-animation: fadeInAnimation ease 0.5s;
-          animation: fadeInAnimation ease 0.5s;
+  -webkit-animation: fadeInAnimation ease 0.2s;
+          animation: fadeInAnimation ease 0.2s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+/*************** MOBILE VERSION NAVBAR ************/
+.mobile-none {
+  display: block;
 }
 
-@keyframes fadeInAnimation {
-  0% {
-    opacity: 0;
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1020px) {
+  .mobile-none {
+    display: none;
   }
-  100% {
-    opacity: 1;
+  .mobile {
+    display: block;
   }
 }
 
@@ -12539,11 +12539,6 @@ button:focus, button:hover {
   color: #000000;
 }
 
-button:active {
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4), inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px #fae385;
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4), inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px #fae385;
-}
-
 form {
   border-radius: 15px;
 }
@@ -12569,8 +12564,8 @@ textarea {
 
 .odstep {
   margin-top: 60px;
-  margin-left: 3%;
-  margin-right: 3%;
+  margin-left: 1vw;
+  margin-right: 1vw;
   padding-bottom: 200px;
 }
 
@@ -12619,16 +12614,6 @@ a {
   padding-right: 30px;
 }
 
-.czerwony {
-  background-color: red;
-}
-
-.zolty {
-  background-color: yellow;
-}
-
-/* The animation code */
-/* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   background-color: #202b3f;
   color: white;
@@ -12689,10 +12674,6 @@ a {
   border: solid 1px #202b3f;
 }
 
-.zielony {
-  background-color: greenyellow;
-}
-
 .faq_image img {
   width: 60vw;
 }
@@ -12714,62 +12695,6 @@ a {
   height: 50px;
   -webkit-animation: spin 2s infinite;
           animation: spin 2s infinite;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    border-top: 10px solid #293e57;
-  }
-  25% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    border-top: 16px solid #45b3e0;
-  }
-  50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    border-top: 10px solid #45b3e0;
-  }
-  75% {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
-    border-top: 16px solid #45b3e0;
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    border-top: 10px solid #293e57;
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    border-top: 10px solid #293e57;
-  }
-  25% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    border-top: 16px solid #45b3e0;
-  }
-  50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    border-top: 10px solid #45b3e0;
-  }
-  75% {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
-    border-top: 16px solid #45b3e0;
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    border-top: 10px solid #293e57;
-  }
 }
 
 .list-group-item-mine {
@@ -12805,5 +12730,95 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-right: 2vw;
+}
+
+/*************** Magazyn Navlinks ***************/
+.nav-tabs .nav-item .nav-link {
+  color: black;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+  color: #0080FF;
+}
+
+.tab-content {
+  border: 1px solid #dee2e6;
+  border-top: transparent;
+  padding: 15px;
+}
+
+/*************** ANIMATION ***************/
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-top: 10px solid #293e57;
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    border-top: 16px solid #45b3e0;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    border-top: 10px solid #45b3e0;
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    border-top: 16px solid #45b3e0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border-top: 10px solid #293e57;
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-top: 10px solid #293e57;
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    border-top: 16px solid #45b3e0;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    border-top: 10px solid #45b3e0;
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    border-top: 16px solid #45b3e0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border-top: 10px solid #293e57;
+  }
+}
+
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

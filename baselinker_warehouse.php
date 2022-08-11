@@ -53,7 +53,7 @@ require "addons/head.php";
     ?>
     <div class="col-11">
 
-        <div class="row odstep bialy cien">
+        <div class="row bialy">
             <div class="col-11">
             <h1 class="srodek">Magazyn Produkcja</h1>
             <ul class="nav nav-tabs">

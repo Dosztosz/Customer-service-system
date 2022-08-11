@@ -15,18 +15,27 @@ $border-radius: 15px;
 $kolor_przycisk: #202b3f;
 body {
     overflow-x: hidden;
-    animation: fadeInAnimation ease 0.5s;
+    animation: fadeInAnimation ease 0.2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
+/*************** MOBILE VERSION NAVBAR ************/
+.mobile-none{
+    display: block;
+}
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 1020px) {
+    .mobile-none {
+        display: none;
     }
-    100% {
-        opacity: 1;
+    .mobile {
+        display: block;
     }
 }
+
 button {
     outline: none;
     height: 40px;
@@ -49,10 +58,6 @@ button {
         border: 1px solid #45b3e0;
         color: #000000;
     }
-}
-
-button:active {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4), inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
 }
 
 form {
@@ -82,8 +87,8 @@ textarea {
 
 .odstep {
     margin-top: 60px;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 1vw;
+    margin-right: 1vw;
     padding-bottom: 200px;
 }
 
@@ -129,16 +134,6 @@ a {
 .kurierzy td {
     padding-right: 30px;
 }
-
-.czerwony {
-    background-color: red;
-}
-
-.zolty {
-    background-color: yellow;
-}
-/* The animation code */
-/* Style the buttons that are used to open and close the accordion panel */
 
 .accordion {
     background-color: $kolor_przycisk;
@@ -196,9 +191,6 @@ a {
     border: solid 1px $kolor_przycisk;
 }
 
-.zielony {
-    background-color: greenyellow;
-}
 .faq_image{
     img {
         width: 60vw;
@@ -218,28 +210,6 @@ a {
     width: 50px;
     height: 50px;
     animation: spin 2s infinite;
-}
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-        border-top: 10px solid #293e57;
-    }
-    25% {
-        transform: rotate(90deg);
-        border-top: 16px solid #45b3e0;
-    }
-    50% {
-        transform: rotate(180deg);
-        border-top: 10px solid #45b3e0;
-    }
-    75% {
-        transform: rotate(270deg);
-        border-top: 16px solid #45b3e0;
-    }
-    100% {
-        transform: rotate(360deg);
-        border-top: 10px solid #293e57;
-    }
 }
 
 .list-group-item-mine {
@@ -269,4 +239,52 @@ a {
     color: white;
     display: flex;
     justify-content: space-between;
+    padding-right: 2vw;
+}
+/*************** Magazyn Navlinks ***************/
+.nav-tabs .nav-item .nav-link {
+    color: black;
+  }
+  
+  .nav-tabs .nav-item .nav-link.active {
+    color: #0080FF;
+  }
+  
+  .tab-content {
+    border: 1px solid #dee2e6;
+    border-top: transparent;
+    padding: 15px;
+  }
+
+/*************** ANIMATION ***************/
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        border-top: 10px solid #293e57;
+    }
+    25% {
+        transform: rotate(90deg);
+        border-top: 16px solid #45b3e0;
+    }
+    50% {
+        transform: rotate(180deg);
+        border-top: 10px solid #45b3e0;
+    }
+    75% {
+        transform: rotate(270deg);
+        border-top: 16px solid #45b3e0;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-top: 10px solid #293e57;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

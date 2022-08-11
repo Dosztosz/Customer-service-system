@@ -30,19 +30,19 @@ require "addons/head.php";
     require 'addons/navbar.php'
     ?>
     <div class="col-11">
-        <div class="row odstep bialy cien">
+        <div class="row bialy">
             <div class="col-11">
                 <!--wypis produktow-->
             <h1 class="srodek">Magazyn Biuro</h1>
             <ul class="nav nav-tabs">
-              <li class="nav-item"><a class="nav-link active" aria-current="page" href="magazyn_biuro.php">Pokaż Wszystkie</a></li>
-              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=czas_jest">Amazon</a></li>
-              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=ebay">Ebay</a></li>
-              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=shopper">Shopper</a></li>
-              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=kaufland">Kaufland</a></li>
-              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=cdiscount">Cdiscount</a></li>
-              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=etsy">Etsy</a></li>
-              <li class="nav-item"><a class="nav-link" aria-current="page" href="filtr.php?kolumna=allegro">Allegro</a></li>
+              <li class="nav-item"><a class="nav-link nav-link-mine active" aria-current="page" href="magazyn_biuro.php">Pokaż Wszystkie</a></li>
+              <li class="nav-item"><a class="nav-link nav-link-mine" aria-current="page" href="filtr.php?kolumna=czas_jest">Amazon</a></li>
+              <li class="nav-item"><a class="nav-link nav-link-mine" aria-current="page" href="filtr.php?kolumna=ebay">Ebay</a></li>
+              <li class="nav-item"><a class="nav-link nav-link-mine" aria-current="page" href="filtr.php?kolumna=shopper">Shopper</a></li>
+              <li class="nav-item"><a class="nav-link nav-link-mine" aria-current="page" href="filtr.php?kolumna=kaufland">Kaufland</a></li>
+              <li class="nav-item"><a class="nav-link nav-link-mine" aria-current="page" href="filtr.php?kolumna=cdiscount">Cdiscount</a></li>
+              <li class="nav-item"><a class="nav-link nav-link-mine" aria-current="page" href="filtr.php?kolumna=etsy">Etsy</a></li>
+              <li class="nav-item"><a class="nav-link nav-link-mine" aria-current="page" href="filtr.php?kolumna=allegro">Allegro</a></li>
             </ul>
             <!--wyszukiwani-->
             <div class="searchbar p-2">

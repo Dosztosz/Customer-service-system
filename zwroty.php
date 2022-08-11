@@ -25,7 +25,7 @@
 <?php require 'addons/navbar.php'?>
     <div class="col-11">
 
-        <div class="row odstep bialy cien">
+        <div class="row bialy">
             <div>
             <h1 class="srodek">Zwroty W trakcie</h1>
             <button class="accordion">Dodaj Zwrot</button>
