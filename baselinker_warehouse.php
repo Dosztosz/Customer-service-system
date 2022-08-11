@@ -1,5 +1,6 @@
 <?php
     header("Content-Type: text/html;charset=UTF-8");
+    require "session_test.php";
     require "connect.php";
     $all = $stal = $czarny = $bialy = $szary = $zloty = '';
     if(isset($_GET['paint']))

@@ -1,272 +1,272 @@
-        $border-radius: 15px;
-        $kolor_przycisk: #202b3f;
-        body {
+// Custom.scss
+// Option A: Include all of Bootstrap
 
-            overflow-x: hidden;
-            animation: fadeInAnimation ease 0.5s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        }
+// Include custom variables default overrides here
 
-        @keyframes fadeInAnimation {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-        .top {
-            background-color: #3475ad;
-            padding-top: 10px;
-            padding-left: 10px;
-            padding-bottom: 10px;
-            color: white;
-        }
-        .caly {
-            min-height: 1000px;
-        }
-        button {
-            outline: none;
-            height: 40px;
-            margin-bottom: 10px;
-            margin-right: 10px;
-            font-size: 1em;
-            box-sizing: border-box;
-            border: none;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all .2s ease-in-out;
-            background-color: $kolor_przycisk;
-            color: white;
-            border: 1px solid black;
-            border-radius: 10px;
-            &:focus,
-            &:hover {
-                background-size: 150% 150%;
-                background-color: #87ceeb;
-                border: 1px solid #45b3e0;
-                color: #000000;
-            }
-        }
-        
-        button:active {
-            box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4), inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
-        }
-        
-        form {
-            border-radius: $border-radius;
-        }
-        
-        .srodek {
-            text-align: center;
-        }
-        
-        textarea {
-            border-radius: $border-radius;
-        }
-        
-        .odpowiedzi {
-            img {
-                margin-right: 5px;
-                border: 1px solid black;
-                width: 20px;
-                height: 15px;
-            }
-        }
-        
-        .col h2 {
-            margin-top: 40px;
-        }
-        
-        .odstep {
-            margin-top: 60px;
-            margin-left: 3%;
-            margin-right: 3%;
-            padding-bottom: 200px;
-        }
-        
-        .niebieski {
-            background-color: $kolor_przycisk;
-        }
-        
-        .col-1 {
-            padding-right: 0;
-            padding-top: 20px;
-            .blok {
-                padding-top: 15px;
-                padding-bottom: 15px;
-                margin: 0;
-                text-align: left;
-                display: block;
-                height: 50px;
-                width: 100%;
-                list-style: none;
-                transition: 0.3s;
-                color: white;
-                &:hover {
-                    background-color: #2b4461;
-                }
-            }
-            .active {
-                background-color: #172433;
-            }
-        }
-        
-        a {
-            text-decoration: none;
-        }
-        
-        .najechanie {
-            margin-left: 30px;
-            &:hover {
-                background-color: #87ceeb;
-            }
-        }
-        
-        .bialy {
-            background-color: white;
-            border-radius: 15px;
-            margin-right: 15px;
-        }
-        
-        .aktywny {
-            background-color: #172433;
-        }
-        
-        .cien {
-            box-shadow: 10px 10px 10px 10px rgb(136, 136, 136);
-        }
-        
-        .duze {
-            width: 60%;
-            padding-left: 10px;
-            word-spacing: 100px;
-        }
-        
-        .reszta {
-            width: 4%;
-        }
-        
-        .kurierzy td {
-            padding-right: 30px;
-        }
-        
-        .czerwony {
-            background-color: red;
-        }
-        
-        .zolty {
-            background-color: yellow;
-        }
-        /* The animation code */
-        /* Style the buttons that are used to open and close the accordion panel */
-        
-        .accordion {
-            background-color: $kolor_przycisk;
-            color: rgb(255, 255, 255);
-            cursor: pointer;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            transition: 0.4s;
-        }
-        
-        .sortowanie {
-            background-color: $kolor_przycisk;
-            color: rgb(255, 255, 255);
-            cursor: pointer;
-            padding: 10px;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            transition: 0.4s;
-        }
-        
-        .sortowanie_out {
-            padding: 0 18px;
-            display: none;
-            background-color: white;
-            overflow: hidden;
-        }
-        
-        .active,
-        .accordion:hover {
-            background-color: #87ceeb;
-            color: black;
-        }
-
-        .accor {
-            background-color: #293e57;
-            &:hover {
-                background-color: #48668a;
-            }
-        }
-
-        
-        .panel {
-            padding: 0 18px;
-            display: none;
-            background-color: white;
-            overflow: hidden;
-        }
-        
-        .input {
-            border-radius: 10px;
-            border: solid 1px $kolor_przycisk;
-        }
-        
-        .zielony {
-            background-color: greenyellow;
-        }
-        .faq_image{
-            img {
-                width: 60vw;
-            }
-        }
-
-        .font-active {
-            a {
-                color: white;
-            text-decoration: none;
-            }
-            color: white;
-            text-decoration: none;
-        }
+$primary: #ffffff;
 
 
+// Include any default variable overrides here (though functions won't be available)
+@import "bootstrap/scss/bootstrap";
+// Then add additional custom code here
 
+/*************** HEADER ***************/
+$border-radius: 15px;
+$kolor_przycisk: #202b3f;
+body {
+    overflow-x: hidden;
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+button {
+    outline: none;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 1em;
+    box-sizing: border-box;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-color: $kolor_przycisk;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    &:focus,
+    &:hover {
+        background-size: 150% 150%;
+        background-color: #87ceeb;
+        border: 1px solid #45b3e0;
+        color: #000000;
+    }
+}
 
-        .animacja {
-            border: 16px solid #293e57;
-            border-radius: 30%;
-            width: 50px;
-            height: 50px;
-            animation: spin 2s infinite;
-        }
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-                border-top: 10px solid #293e57;
-            }
-            25% {
-                transform: rotate(90deg);
-                border-top: 16px solid #45b3e0;
-            }
-            50% {
-                transform: rotate(180deg);
-                border-top: 10px solid #45b3e0;
-            }
-            75% {
-                transform: rotate(270deg);
-                border-top: 16px solid #45b3e0;
-            }
-            100% {
-                transform: rotate(360deg);
-                border-top: 10px solid #293e57;
-            }
-        }
+button:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(110, 80, 20, .4), inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+}
+
+form {
+    border-radius: $border-radius;
+}
+
+.srodek {
+    text-align: center;
+}
+
+textarea {
+    border-radius: $border-radius;
+}
+
+.odpowiedzi {
+    img {
+        margin-right: 5px;
+        border: 1px solid black;
+        width: 20px;
+        height: 15px;
+    }
+}
+
+.col h2 {
+    margin-top: 40px;
+}
+
+.odstep {
+    margin-top: 60px;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-bottom: 200px;
+}
+
+.niebieski {
+    background-color: $kolor_przycisk;
+}
+
+a {
+    text-decoration: none;
+}
+
+.najechanie {
+    margin-left: 30px;
+    &:hover {
+        background-color: #87ceeb;
+    }
+}
+
+.bialy {
+    background-color: white;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+
+.aktywny {
+    background-color: #172433;
+}
+
+.cien {
+    box-shadow: 10px 10px 10px 10px rgb(136, 136, 136);
+}
+
+.duze {
+    width: 60%;
+    padding-left: 10px;
+    word-spacing: 100px;
+}
+
+.reszta {
+    width: 4%;
+}
+
+.kurierzy td {
+    padding-right: 30px;
+}
+
+.czerwony {
+    background-color: red;
+}
+
+.zolty {
+    background-color: yellow;
+}
+/* The animation code */
+/* Style the buttons that are used to open and close the accordion panel */
+
+.accordion {
+    background-color: $kolor_przycisk;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.sortowanie {
+    background-color: $kolor_przycisk;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.sortowanie_out {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.active,
+.accordion:hover {
+    background-color: #87ceeb;
+    color: black;
+}
+.accor {
+    background-color: #293e57;
+    &:hover {
+        background-color: #48668a;
+    }
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.input {
+    border-radius: 10px;
+    border: solid 1px $kolor_przycisk;
+}
+
+.zielony {
+    background-color: greenyellow;
+}
+.faq_image{
+    img {
+        width: 60vw;
+    }
+}
+.font-active {
+    a {
+        color: white;
+    text-decoration: none;
+    }
+    color: white;
+    text-decoration: none;
+}
+.animacja {
+    border: 16px solid #293e57;
+    border-radius: 30%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        border-top: 10px solid #293e57;
+    }
+    25% {
+        transform: rotate(90deg);
+        border-top: 16px solid #45b3e0;
+    }
+    50% {
+        transform: rotate(180deg);
+        border-top: 10px solid #45b3e0;
+    }
+    75% {
+        transform: rotate(270deg);
+        border-top: 16px solid #45b3e0;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-top: 10px solid #293e57;
+    }
+}
+
+.list-group-item-mine {
+    color: white;
+    background-color: #202b3f;
+    transition: 0.3s;
+  }
+  
+.list-group-item-mine:hover {
+    background-color: #3e6086;
+    border-right: 10px solid white;
+}
+
+.active-mine {
+    background-color: #3e6086;
+    border-right: 10px solid white;
+}
+
+.whole-width {
+    min-height: 1000px;
+}
+.top-bar {
+    background-color: #3475ad;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}

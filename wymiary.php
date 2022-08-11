@@ -1,9 +1,15 @@
 <?php
     header("Content-Type: text/html;charset=UTF-8");
     require "connect.php";
+    require "functions.php";
+    require "session_test.php";
     $sql = "SELECT * FROM wymiary;";
 	$result = $conn->query($sql);
     $site = "wymiary";
+    if($_SERVER['REQUEST_METHOD']=='POST')
+    {
+        add_size();
+    } 
     ?>
 
 
@@ -27,7 +33,7 @@
             <h1 class="srodek">Wymiary EU</h1>
             <button class="accordion_new">Dodaj Wymiar Paczki</button>
             <div class="panel">
-                <form method="POST" action="functions/add_size.php">
+                <form method="POST">
                     <div class="field" tabindex="2">
                         <input name="name" type="text" placeholder="Nazwa" required><br>
                         <input name="size_cm" type="text" placeholder="Wymiar cm" required><br>

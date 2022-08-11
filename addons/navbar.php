@@ -1,4 +1,4 @@
-<div class="col-1 niebieski caly">
+<div class="col-1 niebieski whole-width">
     <?php
     $index = "";
     $magazyn ="";
@@ -11,39 +11,45 @@
     $baselinker = "";
     switch($site){
         case "magazyn":
-            $magazyn = "active";
+            $magazyn = "active-mine";
             break;
         case "magazyn_biuro":
-            $magazyn_biuro = "active";
+            $magazyn_biuro = "active-mine";
             break;
         case "paczki":
-            $paczki = "active";
+            $paczki = "active-mine";
             break;
         case "wymiary":
-            $wymiary = "active";
+            $wymiary = "active-mine";
             break;
         case "faq":
-            $faq = "active";
+            $faq = "active-mine";
             break;
         case "zwroty":
-            $zwroty = "active";
+            $zwroty = "active-mine";
             break;
         case "baselinker";
-            $baselinker = "active";
+            $baselinker = "active-mine";
+            break;
+        case "skroty";
+            $main = "active-mine";
             break;
     }
-    echo '<a href="index.php"><div class="blok '.$index.'"><i class="bi bi-house-fill"></i>Odpowiedzi</div></a>';
-    echo '<a href="zwroty.php"><div class="blok '.$zwroty.'"><i class="bi bi-arrow-counterclockwise"></i>Zwrot</div></a>';
-    if($zwroty == "active")
-    {
-        echo '<a href="archiwum_zwroty.php"><div class="blok '.$zwroty.'">Archiwum</div></a>';
-    }
-    else{}
-    echo '<a href="wymiary.php"><div class="blok '.$wymiary.'"><i class="bi bi-aspect-ratio"></i>Wymiary Paczek</div></a>';
-    echo '<a href="paczki.php"><div class="blok '.$paczki.'"><i class="bi bi-currency-dollar"></i>Koszty Spedycyjne</div></a>';
-    echo '<a href="magazyn.php"><div class="blok '.$magazyn.'"><i class="bi bi-hdd-stack"></i>Magazyn</div></a>';
-    echo '<a href="magazyn_biuro.php"><div class="blok '.$magazyn_biuro.'"><i class="bi bi-hdd-stack"></i>Magazyn biuro</div></a>';
-    echo '<a href="baselinker_warehouse.php"><div class="blok '.$baselinker.'"><i class="bi bi-hdd-stack"></i>Mag Baselinker</div></a>';
-    echo '<a href="faq.php"><div class="blok '.$faq.'"><i class="bi bi-question-circle"></i>FAQ</div></a>';
-?>
+    ?>
+    <ul class="list-group">
+    <a href="main.php"><li class="list-group-item list-group-item-mine <?php echo $main ?>"><i class="bi bi-house-fill"></i><p>Odpowiedzi</p></li></a>
+    <a href="zwroty.php"><li class="list-group-item list-group-item-mine <?php echo $zwroty ?>"><i class="bi bi-arrow-counterclockwise"></i><p>Zwrot</p></li></a>
+        <?php
+        if($zwroty == "active-mine")
+        {
+            echo '<li class="list-group-item list-group-item-mine '.$zwroty.'"><a href="archiwum_zwroty.php"><i class="bi bi-arrow-counterclockwise"></i> Archiwum</a></li>';
+        }
+        ?>
+        <a href="wymiary.php"><li class="list-group-item list-group-item-mine <?php echo $wymiary ?>"><i class="bi bi-aspect-ratio"></i><p>Wymiary Paczek</p></li></a>
+        <a href="paczki.php"><li class="list-group-item list-group-item-mine <?php echo $paczki ?>"><i class="bi bi-currency-dollar"></i><p>Spedycje</p></li></a>
+        <a href="magazyn.php"><li class="list-group-item list-group-item-mine <?php echo $magazyn ?>"><i class="bi bi-hdd-stack"> </i><p>Magazyn</p></li></a>
+        <a href="magazyn_biuro.php"><li class="list-group-item list-group-item-mine <?php echo $magazyn_biuro ?>"><i class="bi bi-hdd-stack"></i><p>Magazyn biuro</p></li></a>
+        <a href="baselinker_warehouse.php"><li class="list-group-item list-group-item-mine <?php echo $baselinker ?>"><i class="bi bi-hdd-stack"></i><p>Produkcja</p></li></a>
+        <a href="faq.php"><li class="list-group-item list-group-item-mine <?php echo $faq ?>"><i class="bi bi-question-circle"></i><p>FAQ</p></li></a>
+    </ul>
     </div>

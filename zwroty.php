@@ -1,9 +1,15 @@
 <?php
     header("Content-Type: text/html;charset=UTF-8");
+    require "session_test.php";
     require "connect.php";
+    require "functions.php";
     $sql = "SELECT * FROM zwroty ORDER BY kategoria ASC;";
 	$result = $conn->query($sql);
     $site = "zwroty";
+    if(isset($_GET['archive']))
+    {
+        archive();
+    }
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +37,7 @@
                         <input name="nr_sledzenia_up" type="text" placeholder="Numer Śledzenia" required><br>
                         <input name="data_zwrot_up" type="date" placeholder="Data Zwrotu Produktu" required><br>
                         <input name="notatka_up" type="text" placeholder="Notatka" required>
-                        <input type="submit" value="Dodaj" >
+                        <input type="submit" value="Dodaj">
 		            </div>
                 </form>
             </div>
@@ -78,7 +84,7 @@ for (i = 0; i < acc.length; i++) {
                     <td>'.$nr_sledzenia.'</td>
                     <td>'.$data_zwrotu.'</td>
                     <td>'.$notatka.'</td>
-                    <td class="reszta"><a href=commands/archive.php?id='.$id.'&op=b>Zakończ</a></td>
+                    <td class="reszta"><a href=?id='.$id.'&op=b&archive>Zakończ</a></td>
                     </tr>';
                     }
                 }

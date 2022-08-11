@@ -1,13 +1,10 @@
 <?php
+require "session_test.php";
 header("Content-Type: text/html;charset=UTF-8");
 $id = $_GET['id'];
 $ilosc = $_GET['il'];
 $nazwa = $_GET['naz'];
 $site = "magazyn";
-
-
-
-
 if (isset($_POST['ilosc']))
 {
     $ilosc_nowa=$_POST['ilosc'];
@@ -20,14 +17,10 @@ if (isset($_POST['ilosc']))
             else {
                 if($conn->query("UPDATE `karosek` SET `Ilosc` = '$ilosc_nowa' WHERE `karosek`.`ID` = $id;"))
                 {
-                                        header('Location: magazyn.php');
+                    header('Location: magazyn.php');
                 }
             }
 }
-
-
-
-
 ?>
 
 <!DOCTYPE html>

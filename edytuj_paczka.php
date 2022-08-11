@@ -1,5 +1,6 @@
 <?php
 header("Content-Type: text/html;charset=UTF-8");
+require "session_test.php";
 $id = $_GET['id'];
 $nazwa = $_GET['naz'];
 $wymiar_cm = $_GET['wym'];

@@ -1,5 +1,6 @@
 <?php
     require "connect.php";
+    require "session_test.php";
     $site="faq";
 
     if (isset($_POST['nazwa']))

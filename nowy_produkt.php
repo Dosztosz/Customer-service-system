@@ -1,5 +1,6 @@
 <?php
 header("Content-Type: text/html;charset=UTF-8");
+require "session_test.php";
 require "connect.php";
 $site = "magazyn";
 if (isset($_POST['nazwa']))
