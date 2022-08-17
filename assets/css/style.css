@@ -12574,6 +12574,7 @@ textarea {
 }
 
 a {
+  color: black;
   text-decoration: none;
 }
 
@@ -12746,6 +12747,11 @@ a {
   border: 1px solid #dee2e6;
   border-top: transparent;
   padding: 15px;
+}
+
+.gradient-custom-2 {
+  background: #3f5efb;
+  background: radial-gradient(circle, #3f5efb 0%, #46d2fc 100%);
 }
 
 /*************** ANIMATION ***************/

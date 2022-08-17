@@ -156,7 +156,6 @@ require "addons/head.php";
                           
                         }
                     }
-                    
                         ?>
                         <script>
 function myFunction() {

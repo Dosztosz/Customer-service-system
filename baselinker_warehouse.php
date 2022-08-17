@@ -121,8 +121,7 @@ require "addons/head.php";
                               }
                           }
                       }
-
-                          ?>
+                      ?>
                           </form>
               </table>
                     </div>

@@ -10,6 +10,10 @@
     {
         add_size();
     } 
+    if (isset($_GET['delete']))
+    {
+        delete($_GET['id'], $site);
+    }
     ?>
 
 
@@ -89,7 +93,7 @@ for (i = 0; i < acc.length; i++) {
                     <td>'.$wymiar_cale.' cali</td>
                     <td>'.$wagafunt.' funt</td>
                     <td><a href="edytuj_paczka.php?id='.$id.'&naz='.$nazwa.'&wym='.$wymiar_cm.'&wagkg='.$waga_kg.'&wymcal='.$wymiar_cale.'&wagfunt='.$wagafunt.'">edytuj</a></td>
-                    <td><a href="delete.php?id='.$id.'&tab='.$site.'">Usuń</a></td>
+                    <td><a href="?delete&id='.$id.'">Usuń</a></td>
                     </tr>';
                 }
             ?>

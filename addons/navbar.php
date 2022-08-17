@@ -43,7 +43,7 @@
         <?php
         if($zwroty == "active-mine")
         {
-            echo '<li class="list-group-item list-group-item-mine '.$zwroty.'"><a href="archiwum_zwroty.php"><i class="bi bi-arrow-counterclockwise"></i> <p>Archiwum</a></a></li>';
+            echo '<li class="list-group-item list-group-item-mine"><a href="archiwum_zwroty.php"><i class="bi bi-arrow-counterclockwise"></i> <p>Archiwum</a></a></li>';
         }
         ?>
         <a href="wymiary.php"><li class="list-group-item list-group-item-mine <?php echo $wymiary ?>"><i class="bi bi-aspect-ratio"></i><p>Wymiary Paczek</p></li></a>
