@@ -64,12 +64,12 @@
                 <h1 class="srodek">Kalkulator</h1>
                 <hr>
                 <h2>Wybierz na co chcesz przeliczyć wartości</h2>
-                <button onclick="calculator()">Cm na Cale</button>
-                <button>Cale na Cm</button>
-                <button>Cm na Stopy</button>
-                <button>Stopy na Cm</button>
-                <button>Kg na Funty</button>
-                <button>Funty na Kg</button>
+                <button onclick="calculator('cmCale')">Cm na Cale</button>
+                <button onclick="calculator('caleCm')">Cale na Cm</button>
+                <button onclick="calculator('cmStopy')">Cm na Stopy</button>
+                <button onclick="calculator('stopyCm')">Stopy na Cm</button>
+                <button onclick="calculator('kgFunt')">Kg na Funty</button>
+                <button onclick="calculator('funtKg')">Funty na Kg</button>
                 <div class="p-1">
                     <label class="contactform-label" for="contactform-member">Kalkulator:</label>
                     <input class="contactform-input input" type="text" id="input-data" placeholder="Cm" />
