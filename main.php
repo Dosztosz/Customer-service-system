@@ -63,35 +63,17 @@
             <div class="col-5">
                 <h1 class="srodek">Kalkulator</h1>
                 <hr>
+                <h2>Wybierz na co chcesz przeliczyć wartości</h2>
+                <button onclick="calculator()">Cm na Cale</button>
+                <button>Cale na Cm</button>
+                <button>Cm na Stopy</button>
+                <button>Stopy na Cm</button>
+                <button>Kg na Funty</button>
+                <button>Funty na Kg</button>
                 <div class="p-1">
-                    <label class="contactform-label" for="contactform-member">Przelicznik na Cale:</label>
-                    <input class="contactform-input input" type="text" id="contactform-member" placeholder="Cm" name="member" value="" onkeyup="fun()" />
-                    <span id="wynik"></span> '
-                </div>
-                <div class="p-1">
-                    <label class="contactform-label" for="contactform-centymetry">Przelicznik na Centymetry:</label>
-                    <input class="contactform-input input" type="text" id="contactform-centymetry" placeholder="Inch" name="centymetry" value="" onkeyup="centymetry()" />
-                    <span id="wynik_centymetry"></span> cm
-                </div>
-                <div class="p-1">
-                    <label class="contactform-label" for="contactform-funt">Przelicznik na Funty:</label>
-                    <input class="contactform-input input" type="text" id="contactform-funt" placeholder="Kg" name="funt" value="" onkeyup="funt()" />
-                    <span id="wynik_funt"></span> funtów
-                </div>
-                <div class="p-1">
-                    <label class="contactform-label" for="contactform-kilogram">Przelicznik na Kilogramy:</label>
-                    <input class="contactform-input input" type="text" id="contactform-kilogram" placeholder="Funt" name="kilogram" value="" onkeyup="kilogram()" />
-                    <span id="wynik_kilogram"></span> Kg
-                </div>
-                <div class="p-1">
-                    <label class="contactform-label" for="contactform-kilogram">Przelicznik na centymetry (stopy):</label>
-                    <input class="contactform-input input" type="text" id="contactform-stoopki" placeholder="Ft" name="kilogram" value="" onkeyup="stoopki()" />
-                    <span id="wynik_stoopki"></span> cm
-                </div>
-                <div class="p-1">
-                    <label class="contactform-label" for="contactform-kilogram">Przelicznik na stopy:</label>
-                    <input class="contactform-input input" type="text" id="contactform-stoopkicm" placeholder="Cm" name="kilogram" value="" onkeyup="stoopki_cm()" />
-                    <span id="wynik_stoopki_cm"></span> ft
+                    <label class="contactform-label" for="contactform-member">Kalkulator:</label>
+                    <input class="contactform-input input" type="text" id="input-data" placeholder="Cm" />
+                    <span id="result"></span>
                 </div>
                     <!--pole tekstowe-->
                 <h3>pole tekstowe</h3>

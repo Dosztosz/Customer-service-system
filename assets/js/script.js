@@ -7,6 +7,26 @@ function addtext(x) {
     e.value += x;
 }
 
+function calculator(){
+    var cmCal = 0.393700787;
+    var cal = 2.54;
+    var stopa = 30.48;
+    var cmStopa = 0.032808399;
+    var funt = 2.20462262;
+    var kilogram = 0.45359237;
+    var input = document.getElementById("input-data").value;
+    var calculate = input * cmCal;
+    var result = (calculate);
+    document.getElementById("result").innerHTML = result;
+    switch(data){
+        case 'cmCale':
+            var input = document.getElementById("input-data").value;
+            var calculate = input * cmCal;
+            var result = (calculate);
+            document.getElementById("result").innerHTML = result;
+    }
+}
+/*
 function fun() {
     var cena = 0.393700787;
     var dzielnik = document.getElementById("contactform-member").value;
@@ -52,10 +72,7 @@ function stoopki_cm() {
     var wynik_stoopki_cm = (przelicz_stoopki_cm);
     document.getElementById("wynik_stoopki_cm").innerHTML = wynik_stoopki_cm;
 }
+*/
 function navopen(tab, data) {
     document.getElementById(tab).style.display="none";
 }
-
-
-
-alert("You just copied this: (" + copyText + ").");
