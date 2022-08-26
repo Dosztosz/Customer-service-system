@@ -64,7 +64,6 @@ if (isset($_POST['nazwa']))
 
 <div class="row bialy">
     <div class="col-6">
-        <!--wypis odpowiedzi-->
     <h1 class="srodek">Wstaw nowy produkt</h1>
     <hr>
 <table>

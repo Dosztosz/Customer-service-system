@@ -15,16 +15,17 @@
 <html lang="en">
 
 <head>
-<title>Zwroty Klienci</title>
+    <title>Zwroty Klienci</title>
+    <!--Head-->
     <?php require "addons/head.php"?>
 </head>
-
 <body>
-<?php require 'addons/title.php'?>
+    <!--Title-->
+    <?php require 'addons/title.php'?>
 <div class="row">
-<?php require 'addons/navbar.php'?>
+    <!--Navbar-->
+    <?php require 'addons/navbar.php'?>
     <div class="col-11">
-
         <div class="row bialy">
             <div>
             <h1 class="srodek">Zwroty W trakcie</h1>
@@ -42,21 +43,21 @@
                 </form>
             </div>
             <script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+            var acc = document.getElementsByClassName("accordion");
+            var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script>
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+            </script>
             <table class="table table-hover">
                 <thead>
                     <th style="width: 12%; margin-right: 5px;">Nazwa Klienta BS</td>
@@ -88,7 +89,6 @@ for (i = 0; i < acc.length; i++) {
                     </tr>';
                     }
                 }
-
                 echo "</table>";
             ?>
             </div>

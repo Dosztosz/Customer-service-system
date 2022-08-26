@@ -10,7 +10,7 @@ if (isset($_POST['action'])) {
   // username and password sent from form 
   $myusername = mysqli_real_escape_string($conn, $_POST['username']);
   $mypassword = mysqli_real_escape_string($conn, $_POST['password']); 
-  
+  // Preparing sql
   $sql = "SELECT id FROM users WHERE username = '$myusername' and passcode = '$mypassword'";
   $result = mysqli_query($conn,$sql);
   $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
