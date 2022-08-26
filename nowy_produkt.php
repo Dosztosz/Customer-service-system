@@ -38,10 +38,6 @@ if (isset($_POST['nazwa']))
                 }
             }
 }
-
-
-
-
 ?>
 
 <!DOCTYPE html>

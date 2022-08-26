@@ -29,6 +29,7 @@ require "addons/head.php";
             <h1 class="srodek">Gdzie wysyłać paczki i czym</h1>
             <hr>
             <h3 class="srodek">Paczki</h3>
+            <!--Spis Kurierow-->
             <table class="table table-striped">
                 <thead>
                     <th class="kurierzy">Kraj</th>

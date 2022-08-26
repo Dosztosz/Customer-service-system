@@ -41,16 +41,13 @@ if (isset($_POST['nazwa']))
 <html lang="en">
 <head>
     <title>Odpowiedzi</title>
-    <?php
-    require "addons/head.php";
-?>
+    <!--Head-->
+    <?php require "addons/head.php" ?>
 </head>
 
 <body>
-    <!--navbar-->
-    <?php
-    require 'addons/title.php'
-?>
+    <!--Navbar-->
+    <?php require 'addons/title.php'?>
 <div class="row">
     <?php 
     require 'addons/navbar.php';

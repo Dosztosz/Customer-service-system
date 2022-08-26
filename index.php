@@ -27,17 +27,17 @@ if (isset($_POST['action'])) {
 }
 ?>
 <html>
-    <?php 
-    include ("addons/head.php");
-    ?>
-    <body style="background-color: #eee;">
+  <head>
+  <!--Head-->
+    <?php include ("addons/head.php");?>
+  </head>
+<body style="background-color: #eee;">
 <section class="h-100">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
-    <div class="text-center mb-10" style="margin-bottom: 50px; margin-top: 50px;">
-              <img src="img/logo.png"
-                style="width: 270px;" alt="logo">
-            </div>
+      <div class="text-center mb-10" style="margin-bottom: 50px; margin-top: 50px;">
+        <img src="img/logo.png" style="width: 270px;" alt="logo">
+      </div>
       <div class="col-xl-6">
         <div class="card rounded-3 text-black" style="padding: 60px;">
             <form method="post">

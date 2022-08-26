@@ -13,21 +13,15 @@ require "session_test.php";
 
 <head>
 <title>Magazyn</title>
-<?php
-
-require "addons/head.php";
-?>
+<!--Head-->
+<?php require "addons/head.php";?>
 </head>
 
 <body>
-    <?php
-    require 'addons/title.php'
-?>
+    <?php require 'addons/title.php'?>
 <div class="row">
     <!--menu pionowe-->
-    <?php
-    require 'addons/navbar.php'
-    ?>
+    <?php require 'addons/navbar.php'?>
     <div class="col-11">
 
         <div class="row bialy">

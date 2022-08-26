@@ -10,20 +10,15 @@ require "session_test.php";
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<title>Magazyn_biuro</title>
-<?php
-
-require "addons/head.php";
-?>
+  <title>Magazyn_biuro</title>
+  <!--Head-->
+  <?php require "addons/head.php";?>
 </head>
 
 <body>
-    <!--navbar-->
-    <?php
-    require 'addons/title.php'
-?>
+  <!--navbar-->
+  <?php require 'addons/title.php'?>
 <div class="row">
     <!--menu pionowe-->
     <?php
