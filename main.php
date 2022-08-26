@@ -85,7 +85,6 @@
                     var kilogram = 0.45359237;
                     var input = document.getElementById("input-data").value;
 
-
                     switch(data){
                         case 'cmCale':
                             var calculate = input * cmCal;
@@ -120,7 +119,7 @@
                 <h3>pole tekstowe</h3>
                 <textarea rows="25" cols="80"></textarea>
             </div>
-            </div>
-            </div>
+        </div>
+    </div>
 </body> 
 </html>

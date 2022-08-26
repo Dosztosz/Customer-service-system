@@ -28,10 +28,7 @@ if (isset($_POST['ilosc']))
 
 <head>
     <title>Odpowiedzi</title>
-    <?php
-
-    require "addons/head.php";
-?>
+    <?php require "addons/head.php";?>
 </head>
 
 <body>
@@ -41,19 +38,16 @@ if (isset($_POST['ilosc']))
 ?>
 
 <div class="row">
-    <?php 
-    require 'addons/navbar.php';
-    ?>
+    <?php require 'addons/navbar.php';?>
     <div class="col-11">
     <div class="row bialy">
-            <div class="col-6">
-                <!--wypis odpowiedzi-->
-            <h1 class="srodek">Odpowiedzi</h1>
-            <hr>
-            <center>
-                <a href="dodanie.php"><button>Stwórz odpowiedź</button></a>
-            </center>
-
+    <div class="col-6">
+    <!--wypis odpowiedzi-->
+    <h1 class="srodek">Odpowiedzi</h1>
+    <hr>
+    <center>
+        <a href="dodanie.php"><button>Stwórz odpowiedź</button></a>
+    </center>
 <form method="post">
 <table>
     <tr>

@@ -58,7 +58,6 @@ require "addons/head.php";
                 <th>Shoper</th>
                 <th>Kaufland</th>
                 <th>Allegro</th>
-
               </thead>
 
         <?php

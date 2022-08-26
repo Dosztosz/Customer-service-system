@@ -1,30 +1,30 @@
 <?php
 session_start();
 include ("connect.php");
-    if(isset($_SESSION['login_user']))
-    {
-        $user = $_SESSION["login_user"];
-        header('location: main.php');
-    }
-   if (isset($_POST['action'])) {
-    // username and password sent from form 
-    $myusername = mysqli_real_escape_string($conn, $_POST['username']);
-    $mypassword = mysqli_real_escape_string($conn, $_POST['password']); 
-    
-    $sql = "SELECT id FROM users WHERE username = '$myusername' and passcode = '$mypassword'";
-    $result = mysqli_query($conn,$sql);
-    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    
-    $count = mysqli_num_rows($result);
-    
-    // If result matched $myusername and $mypassword, table row must be 1 row
-    if($count == 1) {
-       $_SESSION['login_user'] = $myusername;
-       header("location: main.php");
-    }else {
-       $error = "Your Login Name or Password is invalid";
-    }
- }
+  if(isset($_SESSION['login_user']))
+  {
+      $user = $_SESSION["login_user"];
+      header('location: main.php');
+  }
+if (isset($_POST['action'])) {
+  // username and password sent from form 
+  $myusername = mysqli_real_escape_string($conn, $_POST['username']);
+  $mypassword = mysqli_real_escape_string($conn, $_POST['password']); 
+  
+  $sql = "SELECT id FROM users WHERE username = '$myusername' and passcode = '$mypassword'";
+  $result = mysqli_query($conn,$sql);
+  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+  
+  $count = mysqli_num_rows($result);
+  
+  // If result matched $myusername and $mypassword, table row must be 1 row
+  if($count == 1) {
+     $_SESSION['login_user'] = $myusername;
+     header("location: main.php");
+  }else {
+     $error = "Your Login Name or Password is invalid";
+  }
+}
 ?>
 <html>
     <?php 
@@ -54,10 +54,7 @@ include ("connect.php");
               <div class="text-center pt-1 mb-5 pb-1">
                 <button type="hidden" name="action" type="submit">Zaloguj Się</button>
               </div>
-              <?php if(isset($error)){
-                        echo $error;
-                    }
-                    ?>
+              <?php if(isset($error)){ echo $error; }?>
             </form>
               </div>
             </div>
