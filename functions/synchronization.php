@@ -32,10 +32,10 @@ foreach($out['products'] as $order){
     //zebranie informacji z JSONA
     $id = $wariant['variant_id'];
     $ilosc = $wariant['quantity'];
-    $sql = "UPDATE warehouse_baselinker SET ilosc = $ilosc WHERE id_baselinker=$id";
+    $sql = "UPDATE warehouse_baselinker SET warehouse_quantity = $ilosc WHERE warehouse_baselinker_id =$id";
     if(!mysqli_query($conn, $sql))
         {
-         die('Error : ' . mysql_error());
+         die('Error : ');
         }
         else{
             header('location: ../baselinker_warehouse.php');

@@ -1,84 +1,129 @@
 <?php
-header("Content-Type: text/html;charset=UTF-8");
-require "session_test.php";
+    header("Content-Type: text/html;charset=UTF-8");
+    require "session_test.php";
     require "connect.php";
-    $sql = "SELECT * FROM karosek;";
+    $all = $stal = $czarny = $bialy = $szary = $zloty = '';
+    if(isset($_GET['paint']))
+    {
+      $kolor = $_GET['paint'];
+      $sql = "SELECT * FROM warehouse_baselinker WHERE `Kolor` = '$kolor';";
+      switch($kolor){
+        case "Stal":
+          $stal = "active";
+          break;
+        case "Czarny":
+          $czarny = "active";
+          break;
+        case "Biały":
+          $bialy = "active";
+          break;
+        case "Antracyt":
+          $szary = "active";
+          break;
+        case "Złoty":
+          $zloty = "active";
+          break;
+      }
+    }
+    else{
+      $all = "active";
+      $sql = "SELECT * FROM warehouse_baselinker;";
+    }
 	  $result = $conn->query($sql);
     $site = "magazyn";
     ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <title>Magazyn</title>
-<!--Head-->
-<?php require "addons/head.php";?>
+<?php
+require "addons/head.php";
+?>
+<link href="assets/css/style.css" rel="stylesheet" media="print">
 </head>
 
 <body>
-    <?php require 'addons/title.php'?>
+    <?php
+    require 'addons/title.php'
+?>
 <div class="row">
     <!--menu pionowe-->
-    <?php require 'addons/navbar.php'?>
+    <?php
+    require 'addons/navbar.php'
+    ?>
     <div class="col-11">
 
         <div class="row bialy">
             <div class="col-11">
-                <!--wypis produktow-->
-            <h1 class="srodek">Magazyn na Karosku</h1>
-            <hr>
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Wyszukaj...">
-            <a href="nowy_produkt.php"><button>Dodaj produkt</button></a>
-            <table class="table table-hover" id="myTable">
-              <thead>
-                <th scope="col">Nazwa</th>
-                <th scope="col">Ilość</th>
-              </thead>
-        <?php
-                    while($row = $result->fetch_assoc()) {
-                        $id = $row['ID'];
-                        $nazwa = $row['Nazwa'];
-                        $profil = $row['Profil'];
-                        $rozmiar = $row['Rozmiar'];
-                        $kolory = $row['Kolor'];
-                        $ilosc = $row['Ilosc'];
-                        echo "<tr>";
-                        echo '<td class="duze">'.$nazwa.' | '.$profil.' | '.$rozmiar.' | '.$kolory.'</td>';
-                        echo '<td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'&naz='.$nazwa.'>'.$ilosc.' szt</a></td>';
-                        echo "</tr>";
+            <h1 class="srodek">Magazyn Karosek</h1>
+            <ul class="nav nav-tabs">
+              <li class="nav-item"><a class="nav-link <?php echo $all ?>" aria-current="page" href="magazyn.php">Pokaż Wszystkie</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $stal ?>" aria-current="page" href="magazyn.php?paint=Stal">Stal</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $czarny ?>" aria-current="page" href="magazyn.php?paint=Czarny">Czarny</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $bialy ?>" aria-current="page" href="magazyn.php?paint=Biały">Biały</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $szary ?>" aria-current="page" href="magazyn.php?paint=Antracyt">Antracyt</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $zloty ?>" aria-current="page" href="magazyn.php?paint=Złoty">Złoty</a></li>
+            </ul>
+            <div class="filtr p-2" style="border-top: 1px solid black; border-bottom: 1px solid black; margin: 0;">
+              <button class="Button Button--outline" onclick="printDiv()">Wydrukuj</button>
+              <form method="get" action="functions/print.php">
+            </div>
+            <div id="printableTable">
+              
+              <table  class="table table-hover" id="myTable">
+                <thead>
+                  <th>Wybierz</th>
+                  <th>Nazwa</th>
+                  <th>Profil</th>
+                  <th>Rozmiar</th>
+                  <th>Kolor</th>
+                  <th>Ilość</th>
+                </thead>
+                  <?php
+                  if($result = $conn->query($sql)){
+                
+                      while($row = $result->fetch_assoc()) {
+                          $id = $row['warehouse_id'];
+                          $nazwa = $row['warehouse_name'];
+                          $profil = $row['warehouse_profile'];
+                          $rozmiar = $row['warehouse_size'];
+                          $kolory = $row['warehouse_color'];
+                          $ilosc = $row['warehouse_quantity'];
+                          $import = "<tr>
+                          <td>$nazwa</td>
+                          <td>$profil</td>
+                          <td>$rozmiar</td>
+                          <td>$kolory</td>
+                          <td>$ilosc szt</td>
+                          </tr>";
+                          if ($ilosc > 3) {
+                                echo '
+                                <td class="reszta"><input type="checkbox" name="nazwa[]" value="'.$import.'"></td>
+                                <td class="reszta">'.$nazwa.'</td>
+                                <td class="reszta">'.$profil.'</td>
+                                <td class="reszta">'.$rozmiar.'</td>
+                                <td class="reszta">'.$kolory.'</td>
+                                <td class="reszta"><a href = update.php?id='.$id.'&il='.$ilosc.'&naz='.$nazwa.'>'.$ilosc.' szt</a></td>
+                                </tr>';
+                              
+                      }
+                      }
                     }
-                        ?>
-                        <script>
-function myFunction() {
-  // Declare variables
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-
-  // Loop through all table rows, and hide those who don't match the search query
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }
-  }
-}
+                      ?>
+                          </form>
+              </table>
+                    </div>
+            </div>
+            </div>
+            </div>
+            <iframe name="print_frame" width="0" height="0" frameborder="0" src="about:blank"></iframe>
+<script type="text/javascript">
+    function printDiv() {
+         window.frames["print_frame"].document.body.innerHTML = document.getElementById("printableTable").innerHTML;
+         window.frames["print_frame"].window.focus();
+         window.frames["print_frame"].window.print();
+       }
 </script>
-
-                        </form>
-            </table>
-            </div>
-            </div>
-            </div>
 </body>
 
 </html>

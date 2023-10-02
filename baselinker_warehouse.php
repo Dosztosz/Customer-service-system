@@ -3,10 +3,16 @@
     require "session_test.php";
     require "connect.php";
     $all = $stal = $czarny = $bialy = $szary = $zloty = '';
+    if(isset($_GET['number'])){
+      $filter_number = 0;
+    }
+    else{
+      $filter_number = 2;
+    }
     if(isset($_GET['paint']))
     {
       $kolor = $_GET['paint'];
-      $sql = "SELECT * FROM warehouse_baselinker WHERE `Kolor` = '$kolor';";
+      $sql = "SELECT * FROM warehouse_baselinker WHERE `warehouse_color` = '$kolor';";
       switch($kolor){
         case "Stal":
           $stal = "active";
@@ -17,7 +23,7 @@
         case "Biały":
           $bialy = "active";
           break;
-        case "Antracyt":
+        case "Szary":
           $szary = "active";
           break;
         case "Złoty":
@@ -58,10 +64,11 @@ require "addons/head.php";
             <h1 class="srodek">Magazyn Produkcja</h1>
             <ul class="nav nav-tabs">
               <li class="nav-item"><a class="nav-link <?php echo $all ?>" aria-current="page" href="baselinker_warehouse.php">Pokaż Wszystkie</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $all ?>" aria-current="page" href="baselinker_warehouse.php?number=0">Wyświetl tylko poniżej 0</a></li>
               <li class="nav-item"><a class="nav-link <?php echo $stal ?>" aria-current="page" href="baselinker_warehouse.php?paint=Stal">Stal</a></li>
               <li class="nav-item"><a class="nav-link <?php echo $czarny ?>" aria-current="page" href="baselinker_warehouse.php?paint=Czarny">Czarny</a></li>
               <li class="nav-item"><a class="nav-link <?php echo $bialy ?>" aria-current="page" href="baselinker_warehouse.php?paint=Biały">Biały</a></li>
-              <li class="nav-item"><a class="nav-link <?php echo $szary ?>" aria-current="page" href="baselinker_warehouse.php?paint=Antracyt">Antracyt</a></li>
+              <li class="nav-item"><a class="nav-link <?php echo $szary ?>" aria-current="page" href="baselinker_warehouse.php?paint=Szary">Szary</a></li>
               <li class="nav-item"><a class="nav-link <?php echo $zloty ?>" aria-current="page" href="baselinker_warehouse.php?paint=Złoty">Złoty</a></li>
             </ul>
             <div class="filtr p-2" style="border-top: 1px solid black; border-bottom: 1px solid black; margin: 0;">
@@ -82,13 +89,15 @@ require "addons/head.php";
                   <th>Ilość</th>
                 </thead>
                   <?php
+                  if($result = $conn->query($sql)){
+                
                       while($row = $result->fetch_assoc()) {
-                          $id = $row['ID'];
-                          $nazwa = $row['Nazwa'];
-                          $profil = $row['Profil'];
-                          $rozmiar = $row['Rozmiar'];
-                          $kolory = $row['Kolor'];
-                          $ilosc = $row['Ilosc'];
+                          $id = $row['warehouse_id'];
+                          $nazwa = $row['warehouse_name'];
+                          $profil = $row['warehouse_profile'];
+                          $rozmiar = $row['warehouse_size'];
+                          $kolory = $row['warehouse_color'];
+                          $ilosc = $row['warehouse_quantity'];
                           $import = "<tr>
                           <td>$nazwa</td>
                           <td>$profil</td>
@@ -96,7 +105,7 @@ require "addons/head.php";
                           <td>$kolory</td>
                           <td>$ilosc szt</td>
                           </tr>";
-                          if ($ilosc <= 2) {
+                          if ($ilosc < $filter_number) {
                               if($kolory != "Stal")
                               {
                                 echo '
@@ -121,6 +130,7 @@ require "addons/head.php";
                               }
                           }
                       }
+                    }
                       ?>
                           </form>
               </table>

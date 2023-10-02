@@ -11,10 +11,9 @@ if (isset($_POST['action'])) {
   $myusername = mysqli_real_escape_string($conn, $_POST['username']);
   $mypassword = mysqli_real_escape_string($conn, $_POST['password']); 
   // Preparing sql
-  $sql = "SELECT id FROM users WHERE username = '$myusername' and passcode = '$mypassword'";
+  $sql = "SELECT id_user FROM users WHERE username = '$myusername' and passcode = '$mypassword'";
   $result = mysqli_query($conn,$sql);
   $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-  
   $count = mysqli_num_rows($result);
   
   // If result matched $myusername and $mypassword, table row must be 1 row

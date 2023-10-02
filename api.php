@@ -1,4 +1,4 @@
 <?php
 /*Here Paste your Baslinker Token */
-$token = "";
+$token = "7293-7512-HRGL93W8AFAJHQDWEH5817AUA0R7BHGN4VZ8T04NEA1VL7196KO2SGFRLJMZM6KI";
 ?>
