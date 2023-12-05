@@ -1,66 +1,64 @@
 <?php
-    require "connect.php";
-    require "session_test.php";
-    $site="faq";
+require "connect.php";
+require "session_test.php";
+$site = "faq";
 
-    if (isset($_POST['nazwa']))
-	{
-		//sprawdzanie nazwaname
-        $nazwa = $_POST['nazwa'];
-		$tresc = $_POST['tresc'];
+if (isset($_POST['nazwa'])) {
+    //sprawdzanie nazwaname
+    $nazwa = $_POST['nazwa'];
+    $tresc = $_POST['tresc'];
 
-        if($conn->query("INSERT INTO `faq` (`id`, `Nazwa`, `Tresc`) VALUES (NULL,'$nazwa','$tresc');"))
-        {
-            header('Location: faq.php');
-            
-    }
-    else
-    {
+    if ($conn->query("INSERT INTO `faq` (`id`, `Nazwa`, `Tresc`) VALUES (NULL,'$nazwa','$tresc');")) {
+        header('Location: faq.php');
+    } else {
         throw new Exception($conn->error);
-        
     }
-        
-
-    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Dodanie FAQ</title>
+    <title>Dodanie FAQ</title>
     <?php
 
     require "addons/head.php";
-?>
+    ?>
 </head>
+
 <body>
     <!--navbar-->
     <?php
     require 'addons/title.php'
-?>
-
-<div class="row">
-    <?php 
-    require 'addons/navbar.php';
     ?>
-    <div class="col-11">
 
-        <div class="row bialy">
-            <div class="col-6">
-                <!--wypis odpowiedzi-->
-            <h1 class="srodek">Dodaj Odpowiedź</h1>
+    <div class="row">
+        <?php
+        require 'addons/navbar.php';
+        ?>
+        <div class="col-11">
 
-            <form method="post">
-                        Nazwa: <br> <textarea class="pisanie" rows="1" cols="50" id="wklej" name="nazwa"></textarea> <br>
-                        Tresc (w html): <br> <textarea class="pisanie" rows="20" cols="100" id="wklej" name="tresc"></textarea> <br>	
+            <div class="row bialy">
+                <div class="col-6">
+                    <!--wypis odpowiedzi-->
+                    <h1 class="srodek">Dodaj Odpowiedź</h1>
 
-                <input type="submit" value="Dodaj Odpowiedź"> 
-            </form>
-            <h2>Poradnik</h2>
-            <ol>
-                <li>Aby dać większy tekst użyj zakładki < h1-h5 > pamiętaj o zamknięciu przy pomocy < /h1-h5></li>
-            </ol>
-        </div>
-    </div>
-    
+                    <form method="post">
+                        <label for="">Nazwa:</label> <br> <textarea class="pisanie" rows="1" cols="50" id="wklej"
+                            name="nazwa"></textarea> <br>
+                        <label for="">Tresc (w html):</label><br> <textarea class="pisanie" rows="20" cols="100"
+                            id="wklej" name="tresc"></textarea> <br>
+
+                        <input type="submit" value="Dodaj Odpowiedź">
+                    </form>
+                    <h2>Poradnik</h2>
+                    <ol>
+                        <li>Aby dać większy tekst użyj zakładki < h1-h5> pamiętaj o zamknięciu przy pomocy < /h1-h5>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
 </body>
+
 </html>
